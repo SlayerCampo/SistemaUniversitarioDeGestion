@@ -27,6 +27,21 @@
 
 </div>
 
+> [!NOTE]
+> ### 🛡️ Nota de Transparencia y Seguridad para el Docente Evaluador
+> Estimado(a) profesor(a):
+> * **Transparencia Total de Código Abierto:** Todo el código fuente del sistema es 100% público, auditable y está disponible en este mismo repositorio. Puede inspeccionar con total libertad cada línea de código de escritorio en [`1_Version_Escritorio_Avanzada/`](1_Version_Escritorio_Avanzada/) y de la web en [`2_Version_Web_Desplegable/`](2_Version_Web_Desplegable/).
+> * **¿Por qué Windows SmartScreen muestra una advertencia preventiva al ejecutar el instalador `.exe`?**  
+>   Al tratarse de un desarrollo de software universitario independiente y de reciente compilación, el ejecutable no cuenta con un certificado digital corporativo de pago anual ($350+ USD) expedido por una autoridad comercial (como DigiCert o Sectigo). **El software está 100% libre de virus, publicidad y código malicioso.**
+> * **Cómo ejecutarlo con total tranquilidad:**  
+>   Si Windows muestra la pantalla azul de aviso preventivo, simplemente haga clic en **"Más información"** y luego en el botón **"Ejecutar de todas formas"**.
+> * **Vías alternativas de evaluación sin instalar ejecutables:**  
+>   Si prefiere no instalar el archivo `.exe`, puede evaluar el proyecto de manera inmediata:
+>   1. **En la Nube (Sin instalar nada):** Ingrese directamente a [sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/) desde cualquier navegador o teléfono móvil.
+>   2. **Desde el Código Fuente en Python:** Clone el repositorio y haga doble clic sobre [`Ejecutar_Escritorio.bat`](Ejecutar_Escritorio.bat).
+
+---
+
 ## 👥 Equipo de Desarrollo e Información Académica
 
 - **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
@@ -141,8 +156,8 @@ Sistema_Universitario_UCC/
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/Sistema_Universitario_UCC.git
-cd Sistema_Universitario_UCC
+git clone https://github.com/SlayerCampo/SistemaUniversitarioDeGestion.git
+cd SistemaUniversitarioDeGestion
 ```
 
 ### 2. Instalar las Dependencias
