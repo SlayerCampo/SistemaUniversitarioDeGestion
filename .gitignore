@@ -25,4 +25,5 @@ Thumbs.db
 # Carpetas de compilación e instaladores
 build/
 dist/
+dist_installer/
 *.spec

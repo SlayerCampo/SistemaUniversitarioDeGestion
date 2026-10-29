@@ -289,6 +289,19 @@ CSS_INSTITUCIONAL_UCC = """
             min-height: 2.85rem !important;
             font-size: 0.92rem !important;
         }
+        .ucc-aviso-mobile-solo {
+            display: block !important;
+        }
+    }
+
+    /* AVISO EXCLUSIVO RESPONSIVO PARA DISPOSITIVOS MÓVILES */
+    .ucc-aviso-mobile-solo {
+        display: none;
+        background: #FEFCE8;
+        border: 1px solid #FEF08A;
+        border-radius: 10px;
+        padding: 0.85rem 1.05rem;
+        margin-bottom: 0.9rem;
     }
 </style>
 """
@@ -398,16 +411,27 @@ def renderizar_sidebar_ucc():
         )
         st.divider()
 
-        zip_desk = repo.generar_zip_escritorio_bytes()
-        if zip_desk:
+        exe_desk = repo.obtener_instalador_exe_bytes()
+        if exe_desk:
             st.download_button(
-                label="💻 Descargar App de Escritorio (.zip)",
-                data=zip_desk,
-                file_name="Sistema_Universitario_UCC_Escritorio.zip",
-                mime="application/zip",
+                label="💻 Descargar Instalador PC (.exe)",
+                data=exe_desk,
+                file_name="Instalador_Sistema_Universitario_UCC_Setup.exe",
+                mime="application/vnd.microsoft.portable-executable",
                 use_container_width=True,
-                key="btn_sb_descargar_desktop_zip",
+                key="btn_sb_descargar_desktop_exe",
             )
+        else:
+            zip_desk = repo.generar_zip_escritorio_bytes()
+            if zip_desk:
+                st.download_button(
+                    label="💻 Descargar App de Escritorio (.zip)",
+                    data=zip_desk,
+                    file_name="Sistema_Universitario_UCC_Escritorio.zip",
+                    mime="application/zip",
+                    use_container_width=True,
+                    key="btn_sb_descargar_desktop_zip",
+                )
 
         st.download_button(
             label="📥 Descargar Base de Datos (.xlsx)",

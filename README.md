@@ -33,9 +33,9 @@
 - **Programa Académico:** Ingeniería de Sistemas
 - **Asignatura:** Ingeniera de software
 - **Integrantes del Grupo:**
-  1. 👤 **Alejandro Campo Solarte** — ID: 938203
-  2. 👤 **Juan Esteban Cardona Calambas** — ID: 939422
-  3. 👤 **Diego Fernando Gómez Rivera** — ID:
+  1. 👤 **Alejandro Campo Solarte** — ID Timonel: 938203
+  2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: 939422
+  3. 👤 **Diego Fernando Gómez Rivera** — ID Timonel: 937804
 
 ---
 

@@ -33,6 +33,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 BASE_DIR = Path(__file__).resolve().parent.parent
 RUTA_EXCEL_WEB = BASE_DIR / "Registro_Universidad_Web.xlsx"
 RUTA_LOGO_WEB = BASE_DIR / "logo_ucc.png"
+RUTA_INSTALLER_EXE = BASE_DIR / "Instalador_Sistema_Universitario_UCC_Setup.exe"
 
 CREDITOS_MINIMOS = 6
 CREDITOS_MAXIMOS = 19
@@ -849,3 +850,13 @@ def generar_zip_escritorio_bytes() -> bytes | None:
             zf.write(req_raiz, arcname="requirements.txt")
     buf.seek(0)
     return buf.getvalue()
+
+
+def obtener_instalador_exe_bytes() -> bytes | None:
+    """Devuelve los bytes del instalador oficial .exe para Windows (Wizard con siguiente y acceso directo)."""
+    if RUTA_INSTALLER_EXE.exists():
+        return RUTA_INSTALLER_EXE.read_bytes()
+    alt = BASE_DIR.parent / "dist_installer" / "Instalador_Sistema_Universitario_UCC_Setup.exe"
+    if alt.exists():
+        return alt.read_bytes()
+    return None
