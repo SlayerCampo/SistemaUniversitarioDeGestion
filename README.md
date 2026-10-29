@@ -19,23 +19,26 @@
 
 ### 🚀 **Accesos Directos del Proyecto**
 
-| 🌐 **Versión Web en la Nube (Streamlit Cloud)** | 💻 **Versión de Escritorio (Instalador PC)** |
-| :---: | :---: |
-| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sistemauniversitariodegestion.streamlit.app/)<br/>👉 **[sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/)**<br/>*(Disponible 24/7 para celulares, tablets y PC)* | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)<br/>👉 **[Releases y Descargas en GitHub](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)**<br/>*(Descarga directa de instalador y paquete de escritorio)* |
+|                                                                                                                                                     🌐 **Versión Web en la Nube (Streamlit Cloud)**                                                                                                                                                     |                                                                                                                                                                       💻 **Versión de Escritorio (Instalador PC)**                                                                                                                                                                       |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sistemauniversitariodegestion.streamlit.app/)<br/>👉 **[sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/)**<br/>_(Disponible 24/7 para celulares, tablets y PC)_ | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)<br/>👉 **[Releases y Descargas en GitHub](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)**<br/>_(Descarga directa de instalador y paquete de escritorio)_ |
 
 ---
 
 </div>
 
 > [!NOTE]
-> ### 🛡️ Nota de Transparencia y Seguridad para el Docente Evaluador
-> Estimado(a) profesor(a):
-> * **Transparencia Total de Código Abierto:** Todo el código fuente del sistema es 100% público, auditable y está disponible en este mismo repositorio. Puede inspeccionar con total libertad cada línea de código de escritorio en [`1_Version_Escritorio_Avanzada/`](1_Version_Escritorio_Avanzada/) y de la web en [`2_Version_Web_Desplegable/`](2_Version_Web_Desplegable/).
-> * **¿Por qué Windows SmartScreen muestra una advertencia preventiva al ejecutar el instalador `.exe`?**  
+>
+> ### 🛡️ Nota de Transparencia y Seguridad
+>
+> Estimado profesor:
+>
+> - **Transparencia Total de Código Abierto:** Todo el código fuente del sistema es 100% público, auditable y está disponible en este mismo repositorio. Puede inspeccionar con total libertad cada línea de código de escritorio en [`1_Version_Escritorio_Avanzada/`](1_Version_Escritorio_Avanzada/) y de la web en [`2_Version_Web_Desplegable/`](2_Version_Web_Desplegable/).
+> - **¿Por qué Windows SmartScreen muestra una advertencia preventiva al ejecutar el instalador `.exe`?**  
 >   Al tratarse de un desarrollo de software universitario independiente y de reciente compilación, el ejecutable no cuenta con un certificado digital corporativo de pago anual ($350+ USD) expedido por una autoridad comercial (como DigiCert o Sectigo). **El software está 100% libre de virus, publicidad y código malicioso.**
-> * **Cómo ejecutarlo con total tranquilidad:**  
+> - **Cómo ejecutarlo con total tranquilidad:**  
 >   Si Windows muestra la pantalla azul de aviso preventivo, simplemente haga clic en **"Más información"** y luego en el botón **"Ejecutar de todas formas"**.
-> * **Vías alternativas de evaluación sin instalar ejecutables:**  
+> - **Vías alternativas de evaluación sin instalar ejecutables:**  
 >   Si prefiere no instalar el archivo `.exe`, puede evaluar el proyecto de manera inmediata:
 >   1. **En la Nube (Sin instalar nada):** Ingrese directamente a [sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/) desde cualquier navegador o teléfono móvil.
 >   2. **Desde el Código Fuente en Python:** Clone el repositorio y haga doble clic sobre [`Ejecutar_Escritorio.bat`](Ejecutar_Escritorio.bat).
@@ -46,7 +49,7 @@
 
 - **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
 - **Programa Académico:** Ingeniería de Sistemas
-- **Asignatura:** Ingeniera de software
+- **Asignatura:** Ingenieria de software
 - **Integrantes del Grupo:**
   1. 👤 **Alejandro Campo Solarte** — ID Timonel: 938203
   2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: 939422
