@@ -1,8 +1,10 @@
 <div align="center">
 
-# 🏛️ UNIVERSIDAD COOPERATIVA DE COLOMBIA
+# UNIVERSIDAD COOPERATIVA DE COLOMBIA
+
 ### **Campus Cali · Facultad de Ingeniería**
-### *Sistema Inteligente de Gestión Académica, Matrículas y Calificaciones*
+
+### _Sistema Inteligente de Gestión Académica, Matrículas y Calificaciones_
 
 ---
 
@@ -15,11 +17,11 @@
 
 ---
 
-### 🚀 **Accesos Directos del Proyecto**
+### **Accesos Directos del Proyecto**
 
-| 🌐 **Versión Web en la Nube (Streamlit Cloud)** | 💻 **Versión de Escritorio (Instalador PC)** |
-| :---: | :---: |
-| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://share.streamlit.io/)<br/>*(Disponible 24/7 para celulares, tablets y PC)* | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/)<br/>*(Ejecutable autónomo con acceso directo e icono oficial)* |
+|                                                                                 🌐 **Versión Web en la Nube (Streamlit Cloud)**                                                                                 |                                                                                    💻 **Versión de Escritorio (Instalador PC)**                                                                                     |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://share.streamlit.io/)<br/>_(Disponible 24/7 para celulares, tablets y PC)_ | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/)<br/>_(Ejecutable autónomo con acceso directo e icono oficial)_ |
 
 ---
 
@@ -27,13 +29,13 @@
 
 ## 👥 Equipo de Desarrollo e Información Académica
 
-* **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
-* **Programa Académico:** Ingeniería de Sistemas / Ingeniería de Software
-* **Asignatura:** Proyecto de Ingeniería de Software
-* **Integrantes del Grupo:**
-  1. 👤 **Alejandro Campo Solarte** — Cédula / ID: `1001`
-  2. 👤 **Juan Esteban Cardona Calambas** — Cédula / ID: `1002`
-  3. 👤 **Diego Fernando Gómez Rivera** — Cédula / ID: `1003`
+- **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
+- **Programa Académico:** Ingeniería de Sistemas
+- **Asignatura:** Ingeniera de software
+- **Integrantes del Grupo:**
+  1. 👤 **Alejandro Campo Solarte** — ID: 938203
+  2. 👤 **Juan Esteban Cardona Calambas** — ID: 939422
+  3. 👤 **Diego Fernando Gómez Rivera** — ID:
 
 ---
 
@@ -57,34 +59,38 @@ flowchart TD
 ```
 
 ### 1. Matrícula Académica Inteligente en 4 Pasos
-* **Paso 1 (Estudiante y Periodo):** 
-  * **Modo Libre / Demo:** Permite al evaluador consultar cualquier estudiante.
-  * **Simulador de Sesión (ID + Contraseña `1234`):** Bloquea la sesión para un único estudiante, ocultando la lista de los demás para garantizar estricta privacidad.
-* **Paso 2 (Asignaturas Activas):** Muestra en tarjetas visuales las materias ya inscritas en el periodo con sus créditos correspondientes.
-* **Paso 3 (Selección Filtrada en 2 Tiempos):**
-  * **Paso 3.A:** El estudiante solo puede ver las asignaturas de su propio Programa Académico.
-  * **Paso 3.B:** Selección de Grupo y Horario disponible.
-* **Paso 4 (Carrito y Validación en Tiempo Real):**
-  * Control estricto de créditos: Mínimo **6 créditos** y máximo **19 créditos** por semestre.
-  * Detector algorítmico de cruces de horarios y control de cupos en vivo.
-  * Emisión y descarga inmediata de **Recibo Oficial de Matrícula en PDF**.
+
+- **Paso 1 (Estudiante y Periodo):**
+  - **Modo Libre / Demo:** Permite al evaluador consultar cualquier estudiante.
+  - **Simulador de Sesión (ID + Contraseña `1234`):** Bloquea la sesión para un único estudiante, ocultando la lista de los demás para garantizar estricta privacidad.
+- **Paso 2 (Asignaturas Activas):** Muestra en tarjetas visuales las materias ya inscritas en el periodo con sus créditos correspondientes.
+- **Paso 3 (Selección Filtrada en 2 Tiempos):**
+  - **Paso 3.A:** El estudiante solo puede ver las asignaturas de su propio Programa Académico.
+  - **Paso 3.B:** Selección de Grupo y Horario disponible.
+- **Paso 4 (Carrito y Validación en Tiempo Real):**
+  - Control estricto de créditos: Mínimo **6 créditos** y máximo **19 créditos** por semestre.
+  - Detector algorítmico de cruces de horarios y control de cupos en vivo.
+  - Emisión y descarga inmediata de **Recibo Oficial de Matrícula en PDF**.
 
 ### 2. Oferta Académica Realista y Restricción de Almuerzo
-* **5 Facultades Oficiales:** Ingeniería, Ciencias Económicas, Psicología y Ciencias Sociales, Derecho y Ciencias Políticas, y Ciencias de la Salud.
-* **8 Programas Académicos:** Ingeniería de Software, Ingeniería Industrial, Administración de Empresas, Contaduría Pública, Psicología, Derecho, Enfermería y Medicina.
-* **120 Asignaturas y 240 Grupos Ofertados:** 15 asignaturas por programa x 2 grupos paralelos por asignatura.
-* **Bloque de Horas Pedagógicas:** Asignaturas de 2, 3 o 4 horas continuas según su carga en créditos.
-* 🚫 **Regla Estricta de Almuerzo:** **Ninguna clase tiene horario entre las 13:00 y las 14:00 horas**, respetando el bienestar universitario.
+
+- **5 Facultades Oficiales:** Ingeniería, Ciencias Económicas, Psicología y Ciencias Sociales, Derecho y Ciencias Políticas, y Ciencias de la Salud.
+- **8 Programas Académicos:** Ingeniería de Software, Ingeniería Industrial, Administración de Empresas, Contaduría Pública, Psicología, Derecho, Enfermería y Medicina.
+- **120 Asignaturas y 240 Grupos Ofertados:** 15 asignaturas por programa x 2 grupos paralelos por asignatura.
+- **Bloque de Horas Pedagógicas:** Asignaturas de 2, 3 o 4 horas continuas según su carga en créditos.
+- 🚫 **Regla Estricta de Almuerzo:** **Ninguna clase tiene horario entre las 13:00 y las 14:00 horas**, respetando el bienestar universitario.
 
 ### 3. Centro de Datos ETL y Modo Inicial en Blanco
-* La base de datos inicia **completamente en blanco** en su primera visita para permitir registros limpios desde cero.
-* Botón para generar un archivo Excel (`.xlsx`) con **50 estudiantes simulados y distribuidos equitativamente**, listos para importar manualmente mediante un buscador de archivos de Windows.
-* Funciones de vaciado, respaldo y exportación de datos en caliente.
+
+- La base de datos inicia **completamente en blanco** en su primera visita para permitir registros limpios desde cero.
+- Botón para generar un archivo Excel (`.xlsx`) con **50 estudiantes simulados y distribuidos equitativamente**, listos para importar manualmente mediante un buscador de archivos de Windows.
+- Funciones de vaciado, respaldo y exportación de datos en caliente.
 
 ### 4. Panel Docente y Boletín de Calificaciones
-* Calificación por tres cortes oficiales: **Corte 1 (30%)**, **Corte 2 (30%)** y **Corte 3 (40%)**.
-* Planilla completa en lote para computador y modo individual adaptativo para celular.
-* Cálculo automático del **Promedio Ponderado Semestral (PPS)** y descarga de Boletín Oficial en PDF.
+
+- Calificación por tres cortes oficiales: **Corte 1 (30%)**, **Corte 2 (30%)** y **Corte 3 (40%)**.
+- Planilla completa en lote para computador y modo individual adaptativo para celular.
+- Cálculo automático del **Promedio Ponderado Semestral (PPS)** y descarga de Boletín Oficial en PDF.
 
 ---
 
@@ -133,58 +139,38 @@ Sistema_Universitario_UCC/
 ## 💻 Instalación y Ejecución Local
 
 ### 1. Clonar el Repositorio
+
 ```bash
 git clone https://github.com/TU_USUARIO/Sistema_Universitario_UCC.git
 cd Sistema_Universitario_UCC
 ```
 
 ### 2. Instalar las Dependencias
+
 Se recomienda utilizar Python 3.9 o superior:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Ejecutar las Aplicaciones
 
-* **Opción A (Mediante lanzadores en 1 clic):**
-  * Doble clic en `Ejecutar_Escritorio.bat` para abrir la versión de escritorio.
-  * Doble clic en `Ejecutar_Web.bat` para abrir la versión web en el navegador.
+- **Opción A (Mediante lanzadores en 1 clic):**
+  - Doble clic en `Ejecutar_Escritorio.bat` para abrir la versión de escritorio.
+  - Doble clic en `Ejecutar_Web.bat` para abrir la versión web en el navegador.
 
-* **Opción B (Mediante la consola PowerShell o Terminal):**
-  * **Versión Escritorio:**
+- **Opción B (Mediante la consola PowerShell o Terminal):**
+  - **Versión Escritorio:**
     ```powershell
     python "1_Version_Escritorio_Avanzada/main.py"
     ```
-  * **Versión Web:**
+  - **Versión Web:**
     ```powershell
     python -m streamlit run "2_Version_Web_Desplegable/app.py"
     ```
 
-* **Crear el Acceso Directo de Escritorio:**
-  * Entra a la carpeta `1_Version_Escritorio_Avanzada` y haz doble clic sobre `Crear_Acceso_Directo.bat`. Se creará un acceso directo en tu Escritorio de Windows con el logotipo oficial de la UCC.
-
----
-
-## 🌐 ¿Cómo desplegar la Versión Web en Streamlit Community Cloud?
-
-1. Sube este repositorio a tu cuenta de **GitHub**.
-2. Ingresa a [share.streamlit.io](https://share.streamlit.io) e inicia sesión con tu GitHub.
-3. Haz clic en **"New app"** y selecciona:
-   * **Repository:** `TU_USUARIO/Sistema_Universitario_UCC`
-   * **Branch:** `main`
-   * **Main file path:** `2_Version_Web_Desplegable/app.py`
-4. Haz clic en **"Deploy!"**. En menos de 2 minutos tu aplicación estará en línea con enlace público para compartir.
-
----
-
-## 📦 Publicación del Instalador en GitHub Releases
-
-Para que cualquier persona pueda descargar el instalador de escritorio directamente desde GitHub:
-1. En tu repositorio de GitHub, dirígete a la sección **"Releases"** (en el menú lateral derecho) y haz clic en **"Draft a new release"**.
-2. Asigna una etiqueta de versión (ej: `v1.0.0`) y un título (ej: `Sistema Universitario UCC v1.0.0 - Versión Instalable`).
-3. Arrastra tu archivo ejecutable o comprimido (`.exe` o `.zip`) en el recuadro de subida de binarios.
-4. Pulsa **"Publish release"**.
-5. Copia el enlace de descarga que te proporciona GitHub y pégalo en el botón `DESCARGAR_INSTALADOR_PC` en la cabecera de este `README.md`.
+- **Crear el Acceso Directo de Escritorio:**
+  - Entra a la carpeta `1_Version_Escritorio_Avanzada` y haz doble clic sobre `Crear_Acceso_Directo.bat`. Se creará un acceso directo en tu Escritorio de Windows con el logotipo oficial de la UCC.
 
 ---
 
