@@ -49,61 +49,78 @@ renderizar_kpis([
     ("Promedio Global", f"{promedio_inst:.2f} / 5.0", "ambar"),
 ])
 
-# Aviso inteligente cuando se accede desde un teléfono celular
-st.markdown(
-    '<div class="ucc-aviso-mobile-solo">'
-    '<div style="font-weight:700; color:#b45309; font-size:0.95rem;">📱 Dispositivo Móvil Detectado</div>'
-    '<div style="font-size:0.85rem; color:#78350f; margin-top:0.25rem; line-height:1.4;">'
-    'Ha ingresado desde un celular o tablet. El <b>Instalador ejecutable para PC (.exe)</b> está diseñado '
-    'exclusivamente para computadores con sistema operativo <b>Windows</b>. Para instalar la aplicación de escritorio '
-    'y crear el icono oficial en su Escritorio, por favor abra este mismo enlace desde su computador.'
-    '</div>'
-    '</div>',
-    unsafe_allow_html=True,
-)
+def es_dispositivo_movil() -> bool:
+    try:
+        ua = st.context.headers.get("User-Agent", "").lower()
+        sec_mob = st.context.headers.get("Sec-Ch-Ua-Mobile", "")
+        if "?1" in sec_mob:
+            return True
+        for m in ("mobile", "android", "iphone", "ipad", "ipod", "windows phone", "tablet"):
+            if m in ua:
+                return True
+    except Exception:
+        pass
+    return False
 
-# Tarjeta y botones de descarga de la aplicación para computador (Escritorio)
-st.markdown(
-    '<div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:0.95rem 1.1rem; margin-bottom:0.75rem;">'
-    '<div style="font-weight:700; color:#0f172a; font-size:1.02rem;">💻 ¿Desea instalar la Versión de Escritorio en su Computador?</div>'
-    '<div style="font-size:0.86rem; color:#475569; margin-top:0.2rem; line-height:1.4;">'
-    'Descargue el instalador oficial para Windows. Al ejecutarlo, se abrirá el asistente profesional con opción '
-    'de <b>crear automáticamente el icono de acceso directo en el Escritorio</b> con el logotipo de la UCC, '
-    'sin necesidad de descomprimir archivos a mano ni tener Python instalado.'
-    '</div>'
-    '</div>',
-    unsafe_allow_html=True,
-)
+es_movil = es_dispositivo_movil()
 
-exe_desk = repo.obtener_instalador_exe_bytes()
-col_desk_desc, col_desk_gh = st.columns([1.7, 1])
-with col_desk_desc:
-    if exe_desk:
-        st.download_button(
-            label="💻 Descargar Instalador Oficial para Windows (.exe — 21 MB)",
-            data=exe_desk,
-            file_name="Instalador_Sistema_Universitario_UCC_Setup.exe",
-            mime="application/vnd.microsoft.portable-executable",
-            use_container_width=True,
-            key="btn_home_descargar_exe",
-        )
-    else:
-        zip_desk = repo.generar_zip_escritorio_bytes()
-        if zip_desk:
-            st.download_button(
-                label="💻 Descargar Versión de Escritorio (.zip)",
-                data=zip_desk,
-                file_name="Sistema_Universitario_UCC_Escritorio.zip",
-                mime="application/zip",
-                use_container_width=True,
-                key="btn_home_descargar_pc",
-            )
-with col_desk_gh:
-    st.link_button(
-        "🐙 Ver Proyecto en GitHub",
-        "https://github.com/SlayerCampo/SistemaUniversitarioDeGestion",
-        use_container_width=True,
+if es_movil:
+    st.error(
+        "📱 **¡Atención! Ha ingresado desde un dispositivo móvil (celular / tablet).**\n\n"
+        "El instalador de escritorio (`.exe`) está diseñado **exclusivamente para computadores con Windows**. "
+        "No es compatible con Android ni iOS y no puede ejecutarse en su teléfono."
     )
+    with st.expander("⚠️ ¿Desea descargarlo de todas formas para transferirlo a su computador?"):
+        st.caption("Si desea guardar el archivo en su teléfono únicamente para pasarlo luego por USB, Drive o correo a su PC con Windows:")
+        confirmar_movil = st.checkbox(
+            "Entiendo que este instalador no funciona en celulares y deseo descargarlo solo para transferirlo a un PC.",
+            key="chk_movil_confirmar",
+        )
+        if confirmar_movil:
+            exe_desk = repo.obtener_instalador_exe_bytes()
+            if exe_desk:
+                st.download_button(
+                    label="📥 Descargar Instalador para pasar a PC (.exe — 21.4 MB)",
+                    data=exe_desk,
+                    file_name="Instalador_Sistema_Universitario_UCC_Setup.exe",
+                    mime="application/vnd.microsoft.portable-executable",
+                    use_container_width=True,
+                    key="btn_descarga_movil_activa",
+                )
+        else:
+            st.info("🔒 El botón de descarga se mantiene bloqueado para evitar que descargue un archivo incompatible en su celular.")
+else:
+    # Tarjeta y botones para PC
+    st.markdown(
+        '<div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:0.95rem 1.1rem; margin-bottom:0.75rem;">'
+        '<div style="font-weight:700; color:#0f172a; font-size:1.02rem;">💻 ¿Desea instalar la Versión de Escritorio en su Computador?</div>'
+        '<div style="font-size:0.86rem; color:#475569; margin-top:0.2rem; line-height:1.4;">'
+        'Descargue el instalador oficial para Windows. Al ejecutarlo, se abrirá el asistente profesional con opción '
+        'de <b>crear automáticamente el icono de acceso directo en el Escritorio</b> con el logotipo de la UCC, '
+        'sin necesidad de descomprimir archivos a mano ni tener Python instalado.'
+        '</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
+    col_desk_desc, col_desk_gh = st.columns([1.7, 1])
+    with col_desk_desc:
+        exe_desk = repo.obtener_instalador_exe_bytes()
+        if exe_desk:
+            st.download_button(
+                label="💻 Descargar Instalador Oficial para Windows (.exe — 21.4 MB)",
+                data=exe_desk,
+                file_name="Instalador_Sistema_Universitario_UCC_Setup.exe",
+                mime="application/vnd.microsoft.portable-executable",
+                use_container_width=True,
+                key="btn_home_descargar_exe",
+            )
+    with col_desk_gh:
+        st.link_button(
+            "🐙 Ver Proyecto en GitHub",
+            "https://github.com/SlayerCampo/SistemaUniversitarioDeGestion",
+            use_container_width=True,
+        )
 
 sesion_activa = obtener_sesion_estudiante()
 if sesion_activa:

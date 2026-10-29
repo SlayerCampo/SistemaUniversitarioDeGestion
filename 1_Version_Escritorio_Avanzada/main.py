@@ -48,6 +48,24 @@ class SistemaUniversitarioApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Sistema Integral de Gestión Académica y Matrículas — UCC")
+
+        # Cargar icono oficial de la Universidad Cooperativa en la ventana y barra de tareas
+        import sys
+        from pathlib import Path
+        if getattr(sys, "frozen", False):
+            base_app = Path(sys.executable).parent
+            ruta_ico = base_app / "logo_ucc.ico"
+            if not ruta_ico.exists():
+                ruta_ico = Path(getattr(sys, "_MEIPASS", base_app)) / "logo_ucc.ico"
+        else:
+            ruta_ico = config.BASE_DIR / "logo_ucc.ico"
+
+        if ruta_ico.exists():
+            try:
+                self.iconbitmap(str(ruta_ico))
+            except Exception:
+                pass
+
         self.update_idletasks()
 
         ancho, alto = 920, 700

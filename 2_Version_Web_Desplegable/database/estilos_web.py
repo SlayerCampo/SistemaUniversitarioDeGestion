@@ -25,10 +25,59 @@ CSS_INSTITUCIONAL_UCC = """
         visibility: hidden !important;
     }
 
-    /* Mantener visible únicamente el botón para abrir la barra lateral en celulares */
+    /* Mantener visible y destacar el botón para abrir la barra lateral en celulares */
     header[data-testid="stHeader"] {
         background: transparent !important;
-        height: 2.5rem !important;
+        height: 3rem !important;
+    }
+
+    /* BOTÓN BLANCO FLOTANTE DESTACADO CON ANIMACIÓN PARA CELULARES */
+    [data-testid="collapsedControl"] {
+        z-index: 999999 !important;
+        top: 0.65rem !important;
+        left: 0.65rem !important;
+        position: fixed !important;
+    }
+    [data-testid="collapsedControl"] button {
+        background: #FFFFFF !important;
+        color: #1F6AA5 !important;
+        border: 2.5px solid #1F6AA5 !important;
+        border-radius: 50% !important;
+        width: 44px !important;
+        height: 44px !important;
+        box-shadow: 0 4px 14px rgba(31, 106, 165, 0.45) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        animation: pulso-menu-celular 2.4s infinite ease-in-out !important;
+        transition: all 0.2s ease-in-out !important;
+        cursor: pointer !important;
+    }
+    [data-testid="collapsedControl"] button:hover {
+        transform: scale(1.15) !important;
+        background: #F0F9FF !important;
+        box-shadow: 0 6px 20px rgba(31, 106, 165, 0.6) !important;
+    }
+    [data-testid="collapsedControl"] svg {
+        fill: #1F6AA5 !important;
+        stroke: #1F6AA5 !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    @keyframes pulso-menu-celular {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 4px 12px rgba(31, 106, 165, 0.35);
+        }
+        50% {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(31, 106, 165, 0.55);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 4px 12px rgba(31, 106, 165, 0.35);
+        }
     }
 
     /* Traducir visualmente el área de carga de archivos (File Uploader) al español */

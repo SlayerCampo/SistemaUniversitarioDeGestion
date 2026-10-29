@@ -30,6 +30,15 @@ Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
 
+; Metadatos institucionales oficiales para Windows
+VersionInfoVersion=1.0.0.0
+VersionInfoCompany=Universidad Cooperativa de Colombia - Sede Cali
+VersionInfoDescription=Sistema de Gestión Académica y Matrículas UCC
+VersionInfoTextVersion=1.0.0.0
+VersionInfoCopyright=Copyright © 2026 Universidad Cooperativa de Colombia
+VersionInfoProductName=Sistema Universitario UCC
+VersionInfoProductVersion=1.0.0.0
+
 [Languages]
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 
@@ -37,6 +46,7 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
 
 [Files]
+Source: "1_Version_Escritorio_Avanzada\logo_ucc.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "1_Version_Escritorio_Avanzada\dist\Sistema_Universitario_UCC\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
@@ -46,3 +56,4 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilen
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}"; Flags: nowait postinstall skipifsilent
+
