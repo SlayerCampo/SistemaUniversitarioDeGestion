@@ -397,6 +397,18 @@ def renderizar_sidebar_ucc():
             "- **⚙️ Administración:** Registros y ETL"
         )
         st.divider()
+
+        zip_desk = repo.generar_zip_escritorio_bytes()
+        if zip_desk:
+            st.download_button(
+                label="💻 Descargar App de Escritorio (.zip)",
+                data=zip_desk,
+                file_name="Sistema_Universitario_UCC_Escritorio.zip",
+                mime="application/zip",
+                use_container_width=True,
+                key="btn_sb_descargar_desktop_zip",
+            )
+
         st.download_button(
             label="📥 Descargar Base de Datos (.xlsx)",
             data=repo.exportar_excel_bytes(),
@@ -404,6 +416,12 @@ def renderizar_sidebar_ucc():
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             use_container_width=True,
             key="btn_sb_descargar_bd_xlsx",
+        )
+
+        st.link_button(
+            "🐙 Repositorio en GitHub",
+            "https://github.com/SlayerCampo/SistemaUniversitarioDeGestion",
+            use_container_width=True,
         )
 
 

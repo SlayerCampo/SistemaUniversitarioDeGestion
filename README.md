@@ -17,11 +17,11 @@
 
 ---
 
-### **Accesos Directos del Proyecto**
+### 🚀 **Accesos Directos del Proyecto**
 
-|                                                                                 🌐 **Versión Web en la Nube (Streamlit Cloud)**                                                                                 |                                                                                    💻 **Versión de Escritorio (Instalador PC)**                                                                                     |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://share.streamlit.io/)<br/>_(Disponible 24/7 para celulares, tablets y PC)_ | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/)<br/>_(Ejecutable autónomo con acceso directo e icono oficial)_ |
+| 🌐 **Versión Web en la Nube (Streamlit Cloud)** | 💻 **Versión de Escritorio (Instalador PC)** |
+| :---: | :---: |
+| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sistemauniversitariodegestion.streamlit.app/)<br/>👉 **[sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/)**<br/>*(Disponible 24/7 para celulares, tablets y PC)* | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)<br/>👉 **[Releases y Descargas en GitHub](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)**<br/>*(Descarga directa de instalador y paquete de escritorio)* |
 
 ---
 

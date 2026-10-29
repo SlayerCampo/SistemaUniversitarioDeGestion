@@ -826,3 +826,26 @@ def exportar_excel_bytes() -> bytes:
     """Devuelve el archivo Excel completo en memoria para descarga directa."""
     asegurar_base_datos()
     return RUTA_EXCEL_WEB.read_bytes()
+
+
+def generar_zip_escritorio_bytes() -> bytes | None:
+    """Empaqueta dinámicamente la carpeta de la versión de escritorio en un archivo ZIP listo para usar."""
+    import zipfile
+    ruta_desk = BASE_DIR.parent / "1_Version_Escritorio_Avanzada"
+    if not ruta_desk.exists():
+        return None
+    buf = BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in ruta_desk.rglob("*"):
+            if "__pycache__" in f.parts or f.suffix == ".pyc" or f.is_dir():
+                continue
+            rel = f.relative_to(ruta_desk)
+            zf.write(f, arcname=str(Path("1_Version_Escritorio_Avanzada") / rel))
+        bat_raiz = BASE_DIR.parent / "Ejecutar_Escritorio.bat"
+        if bat_raiz.exists():
+            zf.write(bat_raiz, arcname="Ejecutar_Escritorio.bat")
+        req_raiz = BASE_DIR.parent / "requirements.txt"
+        if req_raiz.exists():
+            zf.write(req_raiz, arcname="requirements.txt")
+    buf.seek(0)
+    return buf.getvalue()

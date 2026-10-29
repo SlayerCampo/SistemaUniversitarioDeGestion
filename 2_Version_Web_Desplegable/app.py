@@ -49,6 +49,26 @@ renderizar_kpis([
     ("Promedio Global", f"{promedio_inst:.2f} / 5.0", "ambar"),
 ])
 
+# Tarjeta y botones de descarga de la aplicación para computador (Escritorio)
+col_desk_desc, col_desk_gh = st.columns([1.7, 1])
+with col_desk_desc:
+    zip_desk = repo.generar_zip_escritorio_bytes()
+    if zip_desk:
+        st.download_button(
+            label="💻 Descargar Versión de Escritorio (.zip con Acceso Directo e Icono)",
+            data=zip_desk,
+            file_name="Sistema_Universitario_UCC_Escritorio.zip",
+            mime="application/zip",
+            use_container_width=True,
+            key="btn_home_descargar_pc",
+        )
+with col_desk_gh:
+    st.link_button(
+        "🐙 Ver Proyecto en GitHub",
+        "https://github.com/SlayerCampo/SistemaUniversitarioDeGestion",
+        use_container_width=True,
+    )
+
 sesion_activa = obtener_sesion_estudiante()
 if sesion_activa:
     st.info(
