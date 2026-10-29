@@ -1,0 +1,14 @@
+# ==============================================================================
+# Dependencias Generales del Sistema Universitario UCC
+# ==============================================================================
+# Núcleo Web y Visualización:
+streamlit>=1.32.0
+pandas>=2.2.0
+Pillow>=10.2.0
+
+# Gestión de Base de Datos Excel y Reportes Oficiales PDF:
+openpyxl>=3.1.2
+reportlab>=4.1.0
+
+# Cliente de Escritorio Avanzado (GUI Moderna):
+customtkinter>=6.0.0
