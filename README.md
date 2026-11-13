@@ -1,198 +1,176 @@
 <div align="center">
 
-# UNIVERSIDAD COOPERATIVA DE COLOMBIA
+# Sistema Universitario de Gestión
 
-### **Campus Cali · Facultad de Ingeniería**
+### Matrículas, oferta académica y calificaciones para la Universidad Cooperativa de Colombia
 
-### _Sistema Inteligente de Gestión Académica, Matrículas y Calificaciones_
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-brightgreen?style=for-the-badge)](LICENSE)
 
----
+**Proyecto académico · Ingeniería de Software · UCC Campus Cali**
 
-[![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter-blueviolet?style=for-the-badge)](https://github.com/TomSchimansky/CustomTkinter)
-[![Excel Engine](https://img.shields.io/badge/Database-OpenPyXL-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
-[![ReportLab](https://img.shields.io/badge/PDF_Engine-ReportLab-red?style=for-the-badge)](https://www.reportlab.com/)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge)](LICENSE)
-
----
-
-### 🚀 **Accesos Directos del Proyecto**
-
-|                                                                                                                                                     🌐 **Versión Web en la Nube (Streamlit Cloud)**                                                                                                                                                     |                                                                                                                                                                       💻 **Versión de Escritorio (Instalador PC)**                                                                                                                                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sistemauniversitariodegestion.streamlit.app/)<br/>👉 **[sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/)**<br/>_(Disponible 24/7 para celulares, tablets y PC)_ | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)<br/>👉 **[Releases y Descargas en GitHub](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)**<br/>_(Descarga directa de instalador y paquete de escritorio)_ |
-
----
+[Probar versión web](https://sistemauniversitariodegestion.streamlit.app/) ·
+[Descargar versión de escritorio](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)
 
 </div>
 
-> [!NOTE]
->
-> ### 🛡️ Nota de Transparencia y Seguridad
->
-> Estimado profesor:
->
-> - **Transparencia Total de Código Abierto:** Todo el código fuente del sistema es 100% público, auditable y está disponible en este mismo repositorio. Puede inspeccionar con total libertad cada línea de código de escritorio en [`1_Version_Escritorio_Avanzada/`](1_Version_Escritorio_Avanzada/) y de la web en [`2_Version_Web_Desplegable/`](2_Version_Web_Desplegable/).
-> - **¿Por qué Windows SmartScreen muestra una advertencia preventiva al ejecutar el instalador `.exe`?**  
->   Al tratarse de un desarrollo de software universitario independiente y de reciente compilación, el ejecutable no cuenta con un certificado digital corporativo de pago anual ($350+ USD) expedido por una autoridad comercial (como DigiCert o Sectigo). **El software está 100% libre de virus, publicidad y código malicioso.**
-> - **Cómo ejecutarlo con total tranquilidad:**  
->   Si Windows muestra la pantalla azul de aviso preventivo, simplemente haga clic en **"Más información"** y luego en el botón **"Ejecutar de todas formas"**.
-> - **Vías alternativas de evaluación sin instalar ejecutables:**  
->   Si prefiere no instalar el archivo `.exe`, puede evaluar el proyecto de manera inmediata:
->   1. **En la Nube (Sin instalar nada):** Ingrese directamente a [sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/) desde cualquier navegador o teléfono móvil.
->   2. **Desde el Código Fuente en Python:** Clone el repositorio y haga doble clic sobre [`Ejecutar_Escritorio.bat`](Ejecutar_Escritorio.bat).
+## Descripción
 
----
+El Sistema Universitario de Gestión es una solución académica desarrollada en Python para centralizar procesos de matrícula, consulta de asignaturas, control de cupos, validación de horarios y gestión de calificaciones.
 
-## 👥 Equipo de Desarrollo e Información Académica
+El proyecto ofrece dos formas de uso:
 
-- **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
-- **Programa Académico:** Ingeniería de Sistemas
-- **Asignatura:** Ingenieria de software
-- **Integrantes del Grupo:**
-  1. 👤 **Alejandro Campo Solarte** — ID Timonel: 938203
-  2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: 939422
-  3. 👤 **Diego Fernando Gómez Rivera** — ID Timonel: 937804
+- **Aplicación web responsiva**, construida con Streamlit y accesible desde computadores, tabletas y celulares.
+- **Aplicación de escritorio para Windows**, construida con CustomTkinter y distribuida mediante instalador.
 
----
+Ambas versiones comparten el catálogo académico, las reglas de negocio y la generación de reportes PDF. La persistencia local utiliza archivos Excel, lo que facilita la demostración, el respaldo y la carga masiva de información sin configurar un servidor de base de datos.
 
-## 📌 Descripción General
+> **Contexto:** este repositorio corresponde a un proyecto académico de la Universidad Cooperativa de Colombia, Sede Cali. No representa un sistema oficial de producción de la institución.
 
-El **Sistema Universitario UCC** es una solución integral de software concebida con **arquitectura dual** para atender las necesidades de matriculación, oferta académica, seguimiento de calificaciones y administración institucional. Integra dos clientes sincronizados:
+## Funcionalidades principales
 
-1. **Cliente de Escritorio Avanzado (`1_Version_Escritorio_Avanzada/`):** Aplicación de alto rendimiento basada en `CustomTkinter` con interfaz gráfica moderna, ventanas modulares protegidas contra cierres involuntarios, formularios con etiquetas superiores y ejemplos internos, textos deslizables sin barras toscas y creador de acceso directo con el icono oficial de la UCC.
-2. **Cliente Web Responsivo (`2_Version_Web_Desplegable/`):** Aplicación web interactiva construida sobre `Streamlit`, 100% en español (sin botones `Deploy` en inglés ni menús innecesarios), completamente adaptable a teléfonos celulares (`@media (max-width: 640px)`) y computadores, dotada de un **Simulador de Sesión Estudiantil con clave cómoda (`1234`)**.
+### Matrícula académica
 
----
+- Consulta de estudiantes, programas y asignaturas.
+- Selección de grupos y horarios por programa académico.
+- Carrito de matrícula con validación de cupos y cruces de horario.
+- Regla de carga académica entre **6 y 19 créditos**.
+- Confirmación y generación de recibo de matrícula en PDF.
+- Acceso de demostración con clave `1234`.
 
-## ✨ Características y Reglas del Negocio Académico
+### Calificaciones y reportes
 
-```mermaid
-flowchart TD
-    A["👤 Paso 1: Identificación"] -->|ID + Clave 1234| B["📋 Paso 2: Materias Actuales"]
-    B -->|Verifica créditos inscritos| C["📘 Paso 3: Selección por Programa"]
-    C -->|Paso 3.A: Plan de Estudios<br/>Paso 3.B: Grupo y Horario| D["🛒 Paso 4: Carrito de Matrícula"]
-    D -->|Valida Cupos + Cruces + 6 a 19 Cr.| E["✅ Confirmación Oficial y Recibo PDF"]
-```
+- Registro de notas por tres cortes: **30 %, 30 % y 40 %**.
+- Cálculo del promedio ponderado semestral.
+- Panel docente para calificación individual o por grupo.
+- Generación de boletines en PDF.
 
-### 1. Matrícula Académica Inteligente en 4 Pasos
+### Administración y datos
 
-- **Paso 1 (Estudiante y Periodo):**
-  - **Modo Libre / Demo:** Permite al evaluador consultar cualquier estudiante.
-  - **Simulador de Sesión (ID + Contraseña `1234`):** Bloquea la sesión para un único estudiante, ocultando la lista de los demás para garantizar estricta privacidad.
-- **Paso 2 (Asignaturas Activas):** Muestra en tarjetas visuales las materias ya inscritas en el periodo con sus créditos correspondientes.
-- **Paso 3 (Selección Filtrada en 2 Tiempos):**
-  - **Paso 3.A:** El estudiante solo puede ver las asignaturas de su propio Programa Académico.
-  - **Paso 3.B:** Selección de Grupo y Horario disponible.
-- **Paso 4 (Carrito y Validación en Tiempo Real):**
-  - Control estricto de créditos: Mínimo **6 créditos** y máximo **19 créditos** por semestre.
-  - Detector algorítmico de cruces de horarios y control de cupos en vivo.
-  - Emisión y descarga inmediata de **Recibo Oficial de Matrícula en PDF**.
+- Gestión de facultades, programas, materias, estudiantes y matrículas.
+- Importación y exportación mediante Excel.
+- Generación de datos de demostración.
+- Exploración de registros y herramientas de respaldo.
+- Esquema SQL de referencia en [`schema_universidad.sql`](1_Version_Escritorio_Avanzada/schema_universidad.sql).
 
-### 2. Oferta Académica Realista y Restricción de Almuerzo
+## Versiones disponibles
 
-- **5 Facultades Oficiales:** Ingeniería, Ciencias Económicas, Psicología y Ciencias Sociales, Derecho y Ciencias Políticas, y Ciencias de la Salud.
-- **8 Programas Académicos:** Ingeniería de Software, Ingeniería Industrial, Administración de Empresas, Contaduría Pública, Psicología, Derecho, Enfermería y Medicina.
-- **120 Asignaturas y 240 Grupos Ofertados:** 15 asignaturas por programa x 2 grupos paralelos por asignatura.
-- **Bloque de Horas Pedagógicas:** Asignaturas de 2, 3 o 4 horas continuas según su carga en créditos.
-- 🚫 **Regla Estricta de Almuerzo:** **Ninguna clase tiene horario entre las 13:00 y las 14:00 horas**, respetando el bienestar universitario.
+| Versión | Tecnología | Uso recomendado |
+| --- | --- | --- |
+| Web | Streamlit, pandas, OpenPyXL y ReportLab | Evaluación rápida y acceso desde navegador |
+| Escritorio | CustomTkinter, OpenPyXL y ReportLab | Uso local en Windows y demostración sin navegador |
 
-### 3. Centro de Datos ETL y Modo Inicial en Blanco
+### Versión web en línea
 
-- La base de datos inicia **completamente en blanco** en su primera visita para permitir registros limpios desde cero.
-- Botón para generar un archivo Excel (`.xlsx`) con **50 estudiantes simulados y distribuidos equitativamente**, listos para importar manualmente mediante un buscador de archivos de Windows.
-- Funciones de vaciado, respaldo y exportación de datos en caliente.
+Accede directamente a [sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/).
 
-### 4. Panel Docente y Boletín de Calificaciones
+La aplicación puede iniciar con la base de datos vacía. En ese caso, el módulo **Administración** permite cargar información o generar datos de demostración.
 
-- Calificación por tres cortes oficiales: **Corte 1 (30%)**, **Corte 2 (30%)** y **Corte 3 (40%)**.
-- Planilla completa en lote para computador y modo individual adaptativo para celular.
-- Cálculo automático del **Promedio Ponderado Semestral (PPS)** y descarga de Boletín Oficial en PDF.
+### Versión de escritorio
 
----
+El instalador para Windows está disponible en [Releases](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases). Como el ejecutable no utiliza un certificado comercial de firma de código, Windows SmartScreen puede mostrar una advertencia preventiva. También es posible ejecutar el proyecto desde el código fuente siguiendo las instrucciones de instalación local.
 
-## 📂 Estructura del Repositorio
+## Inicio rápido
 
-```text
-Sistema_Universitario_UCC/
-├── .gitignore                          # Exclusión de archivos basura, temporales y caché
-├── requirements.txt                    # Dependencias unificadas para instalación rápida
-├── README.md                           # Documentación técnica oficial
-├── Ejecutar_Escritorio.bat             # Lanzador rápido de la app de escritorio (1 clic)
-├── Ejecutar_Web.bat                    # Lanzador rápido del portal web en local (1 clic)
-│
-├── 1_Version_Escritorio_Avanzada/       # CLIENTE DE ESCRITORIO (CustomTkinter)
-│   ├── main.py                         # Ventana principal del sistema
-│   ├── config.py                       # Configuración y temas visuales UCC
-│   ├── logo_ucc.png                    # Logotipo institucional UCC en PNG
-│   ├── logo_ucc.ico                    # Icono de alta resolución para Windows
-│   ├── Crear_Acceso_Directo.bat        # Generador de acceso directo en el Escritorio
-│   ├── poblar_datos.py                 # Generador de 50 estudiantes en Excel
-│   ├── schema_universidad.sql          # Esquema relacional SQL
-│   ├── core/                           # Gestor de base de datos Excel y validaciones
-│   ├── data/                           # Catálogo académico de programas y asignaturas
-│   ├── ui/                             # Ventanas modulares del sistema
-│   └── reports/                        # Motor de generación de reportes PDF (ReportLab)
-│
-└── 2_Version_Web_Desplegable/          # CLIENTE WEB RESPONSIVO (Streamlit)
-    ├── app.py                          # Portal principal y explorador de oferta
-    ├── logo_ucc.png                    # Logotipo institucional UCC
-    ├── logo_ucc.ico                    # Icono web
-    ├── requirements.txt                # Dependencias específicas de la nube
-    ├── .streamlit/
-    │   └── config.toml                 # Tema institucional UCC y modo visor
-    ├── database/
-    │   ├── repo.py                     # Motor relacional y persistencia Excel
-    │   └── estilos_web.py              # CSS responsivo y componentes en español
-    └── pages/
-        ├── 1_🎓_Matricula.py           # Portal de matrícula guiado en 4 pasos
-        ├── 2_📊_Notas_y_Boletin.py     # Consulta de notas, PPS y boletín PDF
-        ├── 3_👨‍🏫_Panel_Docente.py      # Planilla de notas para docentes
-        └── 4_⚙️_Administracion.py       # Centro ETL y explorador de tablas
-```
+### Requisitos
 
----
+- Python 3.9 o superior.
+- Windows para la aplicación de escritorio.
+- Conexión a Internet únicamente para usar la versión web publicada o descargar el repositorio.
 
-## 💻 Instalación y Ejecución Local
-
-### 1. Clonar el Repositorio
+### Instalación
 
 ```bash
 git clone https://github.com/SlayerCampo/SistemaUniversitarioDeGestion.git
 cd SistemaUniversitarioDeGestion
+python -m venv .venv
 ```
 
-### 2. Instalar las Dependencias
+Activa el entorno virtual:
 
-Se recomienda utilizar Python 3.9 o superior:
+```powershell
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+Instala las dependencias:
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3. Ejecutar las Aplicaciones
+### Ejecución
 
-- **Opción A (Mediante lanzadores en 1 clic):**
-  - Doble clic en `Ejecutar_Escritorio.bat` para abrir la versión de escritorio.
-  - Doble clic en `Ejecutar_Web.bat` para abrir la versión web en el navegador.
+Desde Windows también puedes utilizar `Ejecutar_Escritorio.bat` o `Ejecutar_Web.bat`.
 
-- **Opción B (Mediante la consola PowerShell o Terminal):**
-  - **Versión Escritorio:**
-    ```powershell
-    python "1_Version_Escritorio_Avanzada/main.py"
-    ```
-  - **Versión Web:**
-    ```powershell
-    python -m streamlit run "2_Version_Web_Desplegable/app.py"
-    ```
+```bash
+# Aplicación web
+python -m streamlit run "2_Version_Web_Desplegable/app.py"
 
-- **Crear el Acceso Directo de Escritorio:**
-  - Entra a la carpeta `1_Version_Escritorio_Avanzada` y haz doble clic sobre `Crear_Acceso_Directo.bat`. Se creará un acceso directo en tu Escritorio de Windows con el logotipo oficial de la UCC.
+# Aplicación de escritorio
+python "1_Version_Escritorio_Avanzada/main.py"
+```
 
----
+Para crear un acceso directo de la versión de escritorio, ejecuta `Crear_Acceso_Directo.bat` dentro de `1_Version_Escritorio_Avanzada`.
+
+## Flujo de demostración recomendado
+
+1. Abre la [versión web](https://sistemauniversitariodegestion.streamlit.app/) o ejecuta la aplicación localmente.
+2. Revisa los indicadores de la página principal.
+3. En **Administración**, carga datos o genera el archivo de demostración.
+4. En **Matrícula**, selecciona un estudiante y prueba la validación de créditos, cupos y horarios.
+5. Consulta el **Boletín** y descarga el PDF.
+6. En el **Panel Docente**, registra notas y observa el cálculo del promedio.
+
+La clave `1234` corresponde al modo de demostración incluido en la aplicación. No debe utilizarse como mecanismo de autenticación para un entorno real.
+
+## Estructura del repositorio
+
+```text
+SistemaUniversitarioDeGestion/
+├── 1_Version_Escritorio_Avanzada/
+│   ├── core/                 # Reglas de negocio y validaciones
+│   ├── data/                 # Persistencia, catálogo y carga de datos
+│   ├── reports/              # Reportes PDF
+│   ├── ui/                   # Vistas de la aplicación de escritorio
+│   ├── main.py               # Punto de entrada
+│   └── schema_universidad.sql
+├── 2_Version_Web_Desplegable/
+│   ├── database/             # Persistencia y estilos web
+│   ├── pages/                # Matrícula, notas, docentes y administración
+│   └── app.py                # Punto de entrada web
+├── Ejecutar_Escritorio.bat
+├── Ejecutar_Web.bat
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+
+## Equipo
+
+- **Alejandro Campo Solarte** — ID Timonel: 938203
+- **Juan Esteban Cardona Calambas** — ID Timonel: 939422
+- **Diego Fernando Gómez Rivera** — ID Timonel: 937804
+
+**Institución:** Universidad Cooperativa de Colombia · Sede Cali
+**Programa:** Ingeniería de Sistemas
+**Asignatura:** Ingeniería de Software
+
+## Alcance y consideraciones
+
+- La persistencia basada en Excel está pensada para demostración y uso local; no sustituye una base de datos institucional multiusuario.
+- Los datos incluidos o generados son de demostración.
+- La clave de demostración y los datos simulados no deben reutilizarse en producción.
+- Antes de distribuir el instalador, verifica su procedencia y el contenido de la versión publicada.
+
+## Licencia
+
+Este proyecto se distribuye bajo la [Licencia MIT](LICENSE).
 
 <div align="center">
-  <b>Universidad Cooperativa de Colombia — Campus Cali · 2026</b><br/>
-  <i>Desarrollado con pasión para la excelencia en Ingeniería de Software.</i>
+
+**Universidad Cooperativa de Colombia — Campus Cali · 2026**
+
 </div>
