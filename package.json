@@ -1,0 +1,17 @@
+{
+  "name": "sistema-universitario-ucc",
+  "version": "2.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "dev": "pnpm --filter @ucc/frontend dev",
+    "build": "pnpm --filter @ucc/frontend build",
+    "preview": "pnpm --filter @ucc/frontend preview",
+    "desktop:dev": "pnpm --filter @ucc/frontend tauri dev",
+    "desktop:build": "pnpm --filter @ucc/frontend tauri build",
+    "android:sync": "pnpm --filter @ucc/frontend build && pnpm --filter @ucc/frontend exec cap sync android",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "backend:test": "docker compose exec backend pytest -v"
+  }
+}

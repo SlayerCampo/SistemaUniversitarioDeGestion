@@ -1,0 +1,19 @@
+# Blueprint de despliegue gratuito en Render para el Backend FastAPI
+# Conecta el repositorio en https://dashboard.render.com y pega la DATABASE_URL de Supabase.
+services:
+  - type: web
+    name: sistema-universitario-ucc-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: DEMO_MODE
+        value: "true"
+      - key: CORS_ORIGINS
+        value: "https://sistema-universitario-ucc.pages.dev,http://localhost:5173,http://tauri.localhost,https://tauri.localhost,capacitor://localhost,http://localhost,https://localhost"

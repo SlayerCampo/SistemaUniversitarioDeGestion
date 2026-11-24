@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ucc_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-ucc_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ucc_local_dev_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-universidad_ucc}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ucc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ucc_admin} -d ${POSTGRES_DB:-universidad_ucc}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: ucc_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-ucc_admin}:${POSTGRES_PASSWORD:-ucc_local_dev_2026}@postgres:5432/${POSTGRES_DB:-universidad_ucc}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-ucc-dev-secret-cambiar-en-produccion-2026-clave-segura}
+      JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-480}
+      DEMO_MODE: ${DEMO_MODE:-true}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173,http://tauri.localhost,https://tauri.localhost,capacitor://localhost,http://localhost,https://localhost}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./assets:/app/assets:ro
+
+volumes:
+  ucc_pgdata:

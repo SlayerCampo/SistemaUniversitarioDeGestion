@@ -1,198 +1,137 @@
 <div align="center">
 
-# UNIVERSIDAD COOPERATIVA DE COLOMBIA
-
-### **Campus Cali · Facultad de Ingeniería**
-
-### _Sistema Inteligente de Gestión Académica, Matrículas y Calificaciones_
+# 🏛️ UNIVERSIDAD COOPERATIVA DE COLOMBIA
+### **Campus Cali · Facultad de Ingeniería — Ingeniería de Software**
+### _Sistema Integral de Gestión Académica, Matrículas y Calificaciones (v2.0)_
 
 ---
 
-[![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter-blueviolet?style=for-the-badge)](https://github.com/TomSchimansky/CustomTkinter)
-[![Excel Engine](https://img.shields.io/badge/Database-OpenPyXL-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
-[![ReportLab](https://img.shields.io/badge/PDF_Engine-ReportLab-red?style=for-the-badge)](https://www.reportlab.com/)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge)](LICENSE)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI_Python_3.11-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL_16%2F17-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![React + Vite](https://img.shields.io/badge/Frontend-React_+_Tailwind_+_pnpm-1F6AA5?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Tauri](https://img.shields.io/badge/Desktop-Tauri_Windows_.EXE-FFC131?style=for-the-badge&logo=tauri&logoColor=black)](https://tauri.app/)
+[![Capacitor](https://img.shields.io/badge/Mobile-Capacitor_Android_.APK-119EFF?style=for-the-badge&logo=capacitor&logoColor=white)](https://capacitorjs.com/)
+[![Docker](https://img.shields.io/badge/Local_Dev-Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 ---
 
-### 🚀 **Accesos Directos del Proyecto**
+### 🚀 **Descargas Oficiales y Accesos Directos**
 
-|                                                                                                                                                     🌐 **Versión Web en la Nube (Streamlit Cloud)**                                                                                                                                                     |                                                                                                                                                                       💻 **Versión de Escritorio (Instalador PC)**                                                                                                                                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![Abrir Web](https://img.shields.io/badge/PROBAR_APP_EN_LÍNEA-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sistemauniversitariodegestion.streamlit.app/)<br/>👉 **[sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/)**<br/>_(Disponible 24/7 para celulares, tablets y PC)_ | [![Descargar PC](https://img.shields.io/badge/DESCARGAR_INSTALADOR_PC-059669?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)<br/>👉 **[Releases y Descargas en GitHub](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases)**<br/>_(Descarga directa de instalador y paquete de escritorio)_ |
-
----
+| 💻 **App de Escritorio Windows (`.exe`)** | 📱 **App Móvil Android (`.apk`)** | 📦 **Respaldo Histórico v1.0** |
+| :---: | :---: | :---: |
+| [![Descargar Windows](https://img.shields.io/badge/DESCARGAR_WINDOWS_.EXE-1F6AA5?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Descargar Android](https://img.shields.io/badge/DESCARGAR_ANDROID_.APK-15803D?style=for-the-badge&logo=android&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Tag v1.0-legacy](https://img.shields.io/badge/VER_VERSIÓN_v1.0-475569?style=for-the-badge&logo=git&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/tree/v1.0-legacy) |
 
 </div>
 
+---
+
 > [!NOTE]
->
-> ### 🛡️ Nota de Transparencia y Seguridad
->
-> Estimado profesor:
->
-> - **Transparencia Total de Código Abierto:** Todo el código fuente del sistema es 100% público, auditable y está disponible en este mismo repositorio. Puede inspeccionar con total libertad cada línea de código de escritorio en [`1_Version_Escritorio_Avanzada/`](1_Version_Escritorio_Avanzada/) y de la web en [`2_Version_Web_Desplegable/`](2_Version_Web_Desplegable/).
-> - **¿Por qué Windows SmartScreen muestra una advertencia preventiva al ejecutar el instalador `.exe`?**  
->   Al tratarse de un desarrollo de software universitario independiente y de reciente compilación, el ejecutable no cuenta con un certificado digital corporativo de pago anual ($350+ USD) expedido por una autoridad comercial (como DigiCert o Sectigo). **El software está 100% libre de virus, publicidad y código malicioso.**
-> - **Cómo ejecutarlo con total tranquilidad:**  
->   Si Windows muestra la pantalla azul de aviso preventivo, simplemente haga clic en **"Más información"** y luego en el botón **"Ejecutar de todas formas"**.
-> - **Vías alternativas de evaluación sin instalar ejecutables:**  
->   Si prefiere no instalar el archivo `.exe`, puede evaluar el proyecto de manera inmediata:
->   1. **En la Nube (Sin instalar nada):** Ingrese directamente a [sistemauniversitariodegestion.streamlit.app](https://sistemauniversitariodegestion.streamlit.app/) desde cualquier navegador o teléfono móvil.
->   2. **Desde el Código Fuente en Python:** Clone el repositorio y haga doble clic sobre [`Ejecutar_Escritorio.bat`](Ejecutar_Escritorio.bat).
+> ### 🛡️ Nota de Transparencia y Seguridad para el Docente Evaluador
+> * **Código 100% abierto y auditable:** Todo el código fuente del backend (`FastAPI` + `PostgreSQL`), el frontend unificado (`React + TypeScript + Tailwind`) y las envolturas de escritorio (`Tauri`) y Android (`Capacitor`) se encuentra público en este repositorio.
+> * **Datos 100% sintéticos (Ley 1581 de 2012):** Ninguna cédula o registro de prueba corresponde a datos personales reales; se utilizan identificadores sintéticos (`1001`–`1050`) y contraseñas cifradas con **bcrypt** + sesiones **JWT**.
+> * **Sobre Windows SmartScreen / Android orígenes desconocidos:** Al tratarse de un proyecto universitario sin certificado comercial de firma digital de pago anual, Windows o Android pueden mostrar un aviso preventivo al abrir el `.exe` o el `.apk`. Basta con pulsar **"Más información → Ejecutar de todas formas"** (Windows) o **"Instalar de todas formas"** (Android).
 
 ---
 
-## 👥 Equipo de Desarrollo e Información Académica
+## 👥 Equipo de Desarrollo
 
-- **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
-- **Programa Académico:** Ingeniería de Sistemas
-- **Asignatura:** Ingenieria de software
-- **Integrantes del Grupo:**
-  1. 👤 **Alejandro Campo Solarte** — ID Timonel: 938203
-  2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: 939422
-  3. 👤 **Diego Fernando Gómez Rivera** — ID Timonel: 937804
-
----
-
-## 📌 Descripción General
-
-El **Sistema Universitario UCC** es una solución integral de software concebida con **arquitectura dual** para atender las necesidades de matriculación, oferta académica, seguimiento de calificaciones y administración institucional. Integra dos clientes sincronizados:
-
-1. **Cliente de Escritorio Avanzado (`1_Version_Escritorio_Avanzada/`):** Aplicación de alto rendimiento basada en `CustomTkinter` con interfaz gráfica moderna, ventanas modulares protegidas contra cierres involuntarios, formularios con etiquetas superiores y ejemplos internos, textos deslizables sin barras toscas y creador de acceso directo con el icono oficial de la UCC.
-2. **Cliente Web Responsivo (`2_Version_Web_Desplegable/`):** Aplicación web interactiva construida sobre `Streamlit`, 100% en español (sin botones `Deploy` en inglés ni menús innecesarios), completamente adaptable a teléfonos celulares (`@media (max-width: 640px)`) y computadores, dotada de un **Simulador de Sesión Estudiantil con clave cómoda (`1234`)**.
+* **Institución:** Universidad Cooperativa de Colombia (UCC) — Sede Cali
+* **Programa:** Ingeniería de Sistemas
+* **Asignatura:** Ingeniería de Software
+* **Integrantes:**
+  1. 👤 **Alejandro Campo Solarte** — ID Timonel: `938203`
+  2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: `939422`
+  3. 👤 **Diego Fernando Gómez Rivera** — ID Timonel: `937804`
 
 ---
 
-## ✨ Características y Reglas del Negocio Académico
+## 🏗️ Arquitectura Unificada v2.0 (1 Backend + 1 UI = 3 Plataformas Idénticas)
+
+En la versión 2.0 se eliminó por completo la duplicación entre escritorio y web y se migró la base de datos principal de Excel hacia **PostgreSQL normalizado (3FN)**:
 
 ```mermaid
-flowchart TD
-    A["👤 Paso 1: Identificación"] -->|ID + Clave 1234| B["📋 Paso 2: Materias Actuales"]
-    B -->|Verifica créditos inscritos| C["📘 Paso 3: Selección por Programa"]
-    C -->|Paso 3.A: Plan de Estudios<br/>Paso 3.B: Grupo y Horario| D["🛒 Paso 4: Carrito de Matrícula"]
-    D -->|Valida Cupos + Cruces + 6 a 19 Cr.| E["✅ Confirmación Oficial y Recibo PDF"]
+flowchart LR
+    subgraph CLIENTES ["1 Solo Código Frontend (pnpm + React + Tailwind)"]
+        WEB["🌐 Web Responsive<br/>Cloudflare Pages"]
+        EXE["💻 Escritorio Windows<br/>Tauri (.exe)"]
+        APK["📱 App Android<br/>Capacitor (.apk)"]
+    end
+
+    WEB & EXE & APK -->|HTTPS + JWT| API["⚡ Backend FastAPI (Python 3.11)<br/>Reglas + Cupos Atómicos + PDF + ETL"]
+    API -->|SQLAlchemy + psycopg3| PG[("🐘 PostgreSQL 16/17<br/>Docker Local / Supabase Nube")]
+    API -->|OpenPyXL| XLS["📊 Importación / Exportación Excel ETL"]
+    API -->|ReportLab| PDF["📄 Recibo Matrícula & Boletín PDF"]
 ```
 
-### 1. Matrícula Académica Inteligente en 4 Pasos
-
-- **Paso 1 (Estudiante y Periodo):**
-  - **Modo Libre / Demo:** Permite al evaluador consultar cualquier estudiante.
-  - **Simulador de Sesión (ID + Contraseña `1234`):** Bloquea la sesión para un único estudiante, ocultando la lista de los demás para garantizar estricta privacidad.
-- **Paso 2 (Asignaturas Activas):** Muestra en tarjetas visuales las materias ya inscritas en el periodo con sus créditos correspondientes.
-- **Paso 3 (Selección Filtrada en 2 Tiempos):**
-  - **Paso 3.A:** El estudiante solo puede ver las asignaturas de su propio Programa Académico.
-  - **Paso 3.B:** Selección de Grupo y Horario disponible.
-- **Paso 4 (Carrito y Validación en Tiempo Real):**
-  - Control estricto de créditos: Mínimo **6 créditos** y máximo **19 créditos** por semestre.
-  - Detector algorítmico de cruces de horarios y control de cupos en vivo.
-  - Emisión y descarga inmediata de **Recibo Oficial de Matrícula en PDF**.
-
-### 2. Oferta Académica Realista y Restricción de Almuerzo
-
-- **5 Facultades Oficiales:** Ingeniería, Ciencias Económicas, Psicología y Ciencias Sociales, Derecho y Ciencias Políticas, y Ciencias de la Salud.
-- **8 Programas Académicos:** Ingeniería de Software, Ingeniería Industrial, Administración de Empresas, Contaduría Pública, Psicología, Derecho, Enfermería y Medicina.
-- **120 Asignaturas y 240 Grupos Ofertados:** 15 asignaturas por programa x 2 grupos paralelos por asignatura.
-- **Bloque de Horas Pedagógicas:** Asignaturas de 2, 3 o 4 horas continuas según su carga en créditos.
-- 🚫 **Regla Estricta de Almuerzo:** **Ninguna clase tiene horario entre las 13:00 y las 14:00 horas**, respetando el bienestar universitario.
-
-### 3. Centro de Datos ETL y Modo Inicial en Blanco
-
-- La base de datos inicia **completamente en blanco** en su primera visita para permitir registros limpios desde cero.
-- Botón para generar un archivo Excel (`.xlsx`) con **50 estudiantes simulados y distribuidos equitativamente**, listos para importar manualmente mediante un buscador de archivos de Windows.
-- Funciones de vaciado, respaldo y exportación de datos en caliente.
-
-### 4. Panel Docente y Boletín de Calificaciones
-
-- Calificación por tres cortes oficiales: **Corte 1 (30%)**, **Corte 2 (30%)** y **Corte 3 (40%)**.
-- Planilla completa en lote para computador y modo individual adaptativo para celular.
-- Cálculo automático del **Promedio Ponderado Semestral (PPS)** y descarga de Boletín Oficial en PDF.
+### ✨ Reglas de Negocio Blindadas en Servidor y PostgreSQL
+1. **Esquema Relacional Normalizado (10 Tablas en 3FN):** `facultades`, `programas`, `periodos`, `asignaturas`, `grupos`, `horarios_grupo`, `estudiantes`, `matriculas`, `notas`, `usuarios` con migraciones **Alembic** e índices en todas las llaves foráneas.
+2. **Restricción Física de Almuerzo (13:00–14:00):** Blindada tanto en el validador Python como mediante un `CHECK CONSTRAINT` real en PostgreSQL (`NOT (hora_inicio < 14 AND hora_fin > 13)`). Bloques de `2`, `3` o `4` horas continuas entre `06:00` y `22:00`.
+3. **Matrícula Inteligente en 4 Pasos + Horario Semanal Visual:**
+   - Oferta filtrada exclusivamente al Programa Académico del estudiante (5 Facultades, 8 Programas, 120 Asignaturas, 240 Grupos).
+   - Validación de **6 a 19 créditos**, no repetición de asignatura base, detector matemático de cruces y **reserva atómica de cupos** (`UPDATE grupos SET cupos_disponibles = cupos_disponibles - 1 WHERE id_grupo = :id AND cupos_disponibles > 0`).
+4. **Calificación por Cortes y PPS:** Corte 1 (`30%`), Corte 2 (`30%`) y Corte 3 (`40%`), cálculo automático de definitiva y Promedio Ponderado Semestral (PPS), más descarga nativa de **Boletín PDF** y **Recibo de Matrícula PDF** (incluso en Android mediante Capacitor Filesystem + Share).
+5. **Centro de Exposición (`⚡ Modo Demo`):** Cajón lateral limpio y controlado por `DEMO_MODE=true` para cambiar de rol en 1 clic (`Administrador`, `Docente`, `Estudiante 1001`), poblar 50+ estudiantes, vaciar la BD con confirmación explícita (`VACIAR`) y alternar la URL del servidor API (Nube vs. Docker local).
+6. **Descarga Inteligente en la Web:** Detecta automáticamente si el visitante accede desde **Windows PC** (prioriza el `.exe` + código QR para el celular) o desde **Android** (prioriza el `.apk` y protege contra descargas accidentales del `.exe`).
 
 ---
 
-## 📂 Estructura del Repositorio
-
-```text
-Sistema_Universitario_UCC/
-├── .gitignore                          # Exclusión de archivos basura, temporales y caché
-├── requirements.txt                    # Dependencias unificadas para instalación rápida
-├── README.md                           # Documentación técnica oficial
-├── Ejecutar_Escritorio.bat             # Lanzador rápido de la app de escritorio (1 clic)
-├── Ejecutar_Web.bat                    # Lanzador rápido del portal web en local (1 clic)
-│
-├── 1_Version_Escritorio_Avanzada/       # CLIENTE DE ESCRITORIO (CustomTkinter)
-│   ├── main.py                         # Ventana principal del sistema
-│   ├── config.py                       # Configuración y temas visuales UCC
-│   ├── logo_ucc.png                    # Logotipo institucional UCC en PNG
-│   ├── logo_ucc.ico                    # Icono de alta resolución para Windows
-│   ├── Crear_Acceso_Directo.bat        # Generador de acceso directo en el Escritorio
-│   ├── poblar_datos.py                 # Generador de 50 estudiantes en Excel
-│   ├── schema_universidad.sql          # Esquema relacional SQL
-│   ├── core/                           # Gestor de base de datos Excel y validaciones
-│   ├── data/                           # Catálogo académico de programas y asignaturas
-│   ├── ui/                             # Ventanas modulares del sistema
-│   └── reports/                        # Motor de generación de reportes PDF (ReportLab)
-│
-└── 2_Version_Web_Desplegable/          # CLIENTE WEB RESPONSIVO (Streamlit)
-    ├── app.py                          # Portal principal y explorador de oferta
-    ├── logo_ucc.png                    # Logotipo institucional UCC
-    ├── logo_ucc.ico                    # Icono web
-    ├── requirements.txt                # Dependencias específicas de la nube
-    ├── .streamlit/
-    │   └── config.toml                 # Tema institucional UCC y modo visor
-    ├── database/
-    │   ├── repo.py                     # Motor relacional y persistencia Excel
-    │   └── estilos_web.py              # CSS responsivo y componentes en español
-    └── pages/
-        ├── 1_🎓_Matricula.py           # Portal de matrícula guiado en 4 pasos
-        ├── 2_📊_Notas_y_Boletin.py     # Consulta de notas, PPS y boletín PDF
-        ├── 3_👨‍🏫_Panel_Docente.py      # Planilla de notas para docentes
-        └── 4_⚙️_Administracion.py       # Centro ETL y explorador de tablas
-```
-
----
-
-## 💻 Instalación y Ejecución Local
+## 💻 Ejecución Local con Docker y `pnpm` (Plan B para Sustentación)
 
 ### 1. Clonar el Repositorio
-
 ```bash
 git clone https://github.com/SlayerCampo/SistemaUniversitarioDeGestion.git
 cd SistemaUniversitarioDeGestion
 ```
 
-### 2. Instalar las Dependencias
-
-Se recomienda utilizar Python 3.9 o superior:
-
+### 2. Levantar PostgreSQL 16 + Backend FastAPI en Docker
 ```bash
-pip install -r requirements.txt
+docker compose up -d --build
+```
+* API disponible en: `http://localhost:8000`
+* Documentación interactiva Swagger/OpenAPI: `http://localhost:8000/docs`
+* Salud del sistema y BD: `http://localhost:8000/health`
+
+### 3. Ejecutar Pruebas Automatizadas de Reglas de Negocio (`pytest`)
+```bash
+docker compose exec backend pytest -v
 ```
 
-### 3. Ejecutar las Aplicaciones
+### 4. Ejecutar el Frontend Unificado con `pnpm`
+```bash
+pnpm install
+pnpm dev
+```
+* Abre `http://localhost:5173` en tu navegador (o desde el celular usando tu IP local en la misma red Wi-Fi).
 
-- **Opción A (Mediante lanzadores en 1 clic):**
-  - Doble clic en `Ejecutar_Escritorio.bat` para abrir la versión de escritorio.
-  - Doble clic en `Ejecutar_Web.bat` para abrir la versión web en el navegador.
+---
 
-- **Opción B (Mediante la consola PowerShell o Terminal):**
-  - **Versión Escritorio:**
-    ```powershell
-    python "1_Version_Escritorio_Avanzada/main.py"
-    ```
-  - **Versión Web:**
-    ```powershell
-    python -m streamlit run "2_Version_Web_Desplegable/app.py"
-    ```
+## ☁️ Despliegue 100% Gratuito en Internet (Paso a Paso)
 
-- **Crear el Acceso Directo de Escritorio:**
-  - Entra a la carpeta `1_Version_Escritorio_Avanzada` y haz doble clic sobre `Crear_Acceso_Directo.bat`. Se creará un acceso directo en tu Escritorio de Windows con el logotipo oficial de la UCC.
+1. **Base de Datos PostgreSQL 17 (Supabase — Gratis):**
+   * Crea un proyecto gratuito en [supabase.com](https://supabase.com) y copia la cadena **Connection Pooler (Session mode / URI)** (`postgresql://...`).
+2. **Backend FastAPI (Render — Gratis):**
+   * En [dashboard.render.com](https://dashboard.render.com) → **New → Blueprint** (o **Web Service** seleccionando Docker y `./backend/Dockerfile`).
+   * Configura las variables de entorno:
+     * `DATABASE_URL` = tu URI de PostgreSQL en Supabase.
+     * `JWT_SECRET_KEY` = cadena secreta aleatoria larga.
+     * `DEMO_MODE` = `true` (para tu sustentación).
+     * `CORS_ORIGINS` = tu URL de Cloudflare Pages + `http://tauri.localhost,https://tauri.localhost,capacitor://localhost,http://localhost`.
+   * *Tip de exposición:* Abre `https://tu-api.onrender.com/health` 2 minutos antes de exponer para despertar el contenedor gratuito.
+3. **Frontend Web (Cloudflare Pages — Gratis):**
+   * En [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages → Create → Pages → Connect to Git**.
+   * Selecciona `SlayerCampo/SistemaUniversitarioDeGestion`:
+     * **Root directory:** `frontend`
+     * **Build command:** `pnpm install && pnpm build`
+     * **Build output directory:** `dist`
+     * **Variable de entorno:** `VITE_API_URL=https://tu-api.onrender.com/api/v1`
+4. **Instaladores `.exe` y `.apk` (GitHub Releases — Gratis):**
+   * Publica una Release `v2.0.0` en GitHub adjuntando:
+     * `Instalador_UCC_Academico_v2_Setup.exe`
+     * `UCC_Academico_v2.apk`
+   * La sección **Apps PC / Android** de tu web apunta automáticamente a la última Release publicada.
 
 ---
 
 <div align="center">
-  <b>Universidad Cooperativa de Colombia — Campus Cali · 2026</b><br/>
-  <i>Desarrollado con pasión para la excelencia en Ingeniería de Software.</i>
+  <b>Universidad Cooperativa de Colombia — Campus Cali · 2026</b>
 </div>

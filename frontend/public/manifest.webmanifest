@@ -1,0 +1,16 @@
+{
+  "name": "Sistema Universitario UCC",
+  "short_name": "UCC Académico",
+  "description": "Portal de Gestión Académica, Matrículas y Calificaciones — Universidad Cooperativa de Colombia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#1F6AA5",
+  "icons": [
+    {
+      "src": "/logo_ucc.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

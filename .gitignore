@@ -1,29 +1,48 @@
-# Python cache
+# ==============================================================================
+# .gitignore — Monorepo Sistema Universitario UCC v2.0
+# ==============================================================================
+# Python / Backend
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyc
-
-# Entornos virtuales
 .venv/
 venv/
-env/
-ENV/
-env.bak/
-venv.bak/
+.pytest_cache/
+*.egg-info/
 
-# Bloqueos temporales de Office y Excel
-~$*.xlsx
-*.tmp
+# Node / pnpm / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.pnpm-store/
 
-# Archivos de sistema y editores
+# Tauri / Rust / Desktop Build Artifacts (se publican en GitHub Releases)
+frontend/src-tauri/target/
+frontend/src-tauri/gen/
+dist_installer/
+*.exe
+*.msi
+*.dmg
+
+# Android / Capacitor / Gradle Build Artifacts (se publican en GitHub Releases)
+frontend/android/app/build/
+frontend/android/build/
+frontend/android/.gradle/
+frontend/android/local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Variables de entorno y secretos
+.env
+.env.local
+.env.*.local
+
+# Temporales OS / IDEs / Excel
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
-# Carpetas de compilación e instaladores
-build/
-dist/
-dist_installer/
-*.spec
+~$*.xlsx
+*.tmp
