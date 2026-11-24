@@ -4,7 +4,7 @@
 ### **Campus Cali · Facultad de Ingeniería — Ingeniería de Software**
 ### _Sistema Integral de Gestión Académica, Matrículas y Calificaciones (v2.0)_
 
-**Proyecto académico · Ingeniería de Software · UCC Campus Cali**
+---
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI_Python_3.11-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL_16%2F17-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -31,7 +31,7 @@
 > * **Datos 100% sintéticos (Ley 1581 de 2012):** Ninguna cédula o registro de prueba corresponde a datos personales reales; se utilizan identificadores sintéticos (`1001`–`1050`) y contraseñas cifradas con **bcrypt** + sesiones **JWT**.
 > * **Sobre Windows SmartScreen / Android orígenes desconocidos:** Al tratarse de un proyecto universitario sin certificado comercial de firma digital de pago anual, Windows o Android pueden mostrar un aviso preventivo al abrir el `.exe` o el `.apk`. Basta con pulsar **"Más información → Ejecutar de todas formas"** (Windows) o **"Instalar de todas formas"** (Android).
 
-El Sistema Universitario de Gestión es una solución académica desarrollada en Python para centralizar procesos de matrícula, consulta de asignaturas, control de cupos, validación de horarios y gestión de calificaciones.
+---
 
 ## 👥 Equipo de Desarrollo
 
@@ -43,7 +43,7 @@ El Sistema Universitario de Gestión es una solución académica desarrollada en
   2. 👤 **Juan Esteban Cardona Calambas** — ID Timonel: `939422`
   3. 👤 **Diego Fernando Gómez Rivera** — ID Timonel: `937804`
 
-Ambas versiones comparten el catálogo académico, las reglas de negocio y la generación de reportes PDF. La persistencia local utiliza archivos Excel, lo que facilita la demostración, el respaldo y la carga masiva de información sin configurar un servidor de base de datos.
+---
 
 ## 🏗️ Arquitectura Unificada v2.0 (1 Backend + 1 UI = 3 Plataformas Idénticas)
 
@@ -73,7 +73,7 @@ flowchart LR
 5. **Centro de Exposición (`⚡ Modo Demo`):** Cajón lateral limpio y controlado por `DEMO_MODE=true` para cambiar de rol en 1 clic (`Administrador`, `Docente`, `Estudiante 1001`), poblar 50+ estudiantes, vaciar la BD con confirmación explícita (`VACIAR`) y alternar la URL del servidor API (Nube vs. Docker local).
 6. **Descarga Inteligente en la Web:** Detecta automáticamente si el visitante accede desde **Windows PC** (prioriza el `.exe` + código QR para el celular) o desde **Android** (prioriza el `.apk` y protege contra descargas accidentales del `.exe`).
 
-El instalador para Windows está disponible en [Releases](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases). Como el ejecutable no utiliza un certificado comercial de firma de código, Windows SmartScreen puede mostrar una advertencia preventiva. También es posible ejecutar el proyecto desde el código fuente siguiendo las instrucciones de instalación local.
+---
 
 ## 💻 Ejecución Local con Docker y `pnpm` (Plan B para Sustentación)
 
@@ -81,7 +81,6 @@ El instalador para Windows está disponible en [Releases](https://github.com/Sla
 ```bash
 git clone https://github.com/SlayerCampo/SistemaUniversitarioDeGestion.git
 cd SistemaUniversitarioDeGestion
-python -m venv .venv
 ```
 
 ### 2. Levantar PostgreSQL 16 + Backend FastAPI en Docker
@@ -131,61 +130,7 @@ pnpm dev
      * `UCC_Academico_v2.apk`
    * La sección **Apps PC / Android** de tu web apunta automáticamente a la última Release publicada.
 
-Para crear un acceso directo de la versión de escritorio, ejecuta `Crear_Acceso_Directo.bat` dentro de `1_Version_Escritorio_Avanzada`.
-
-## Flujo de demostración recomendado
-
-1. Abre la [versión web](https://sistemauniversitariodegestion.streamlit.app/) o ejecuta la aplicación localmente.
-2. Revisa los indicadores de la página principal.
-3. En **Administración**, carga datos o genera el archivo de demostración.
-4. En **Matrícula**, selecciona un estudiante y prueba la validación de créditos, cupos y horarios.
-5. Consulta el **Boletín** y descarga el PDF.
-6. En el **Panel Docente**, registra notas y observa el cálculo del promedio.
-
-La clave `1234` corresponde al modo de demostración incluido en la aplicación. No debe utilizarse como mecanismo de autenticación para un entorno real.
-
-## Estructura del repositorio
-
-```text
-SistemaUniversitarioDeGestion/
-├── 1_Version_Escritorio_Avanzada/
-│   ├── core/                 # Reglas de negocio y validaciones
-│   ├── data/                 # Persistencia, catálogo y carga de datos
-│   ├── reports/              # Reportes PDF
-│   ├── ui/                   # Vistas de la aplicación de escritorio
-│   ├── main.py               # Punto de entrada
-│   └── schema_universidad.sql
-├── 2_Version_Web_Desplegable/
-│   ├── database/             # Persistencia y estilos web
-│   ├── pages/                # Matrícula, notas, docentes y administración
-│   └── app.py                # Punto de entrada web
-├── Ejecutar_Escritorio.bat
-├── Ejecutar_Web.bat
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
-
-## Equipo
-
-- **Alejandro Campo Solarte** — ID Timonel: 938203
-- **Juan Esteban Cardona Calambas** — ID Timonel: 939422
-- **Diego Fernando Gómez Rivera** — ID Timonel: 937804
-
-**Institución:** Universidad Cooperativa de Colombia · Sede Cali
-**Programa:** Ingeniería de Sistemas
-**Asignatura:** Ingeniería de Software
-
-## Alcance y consideraciones
-
-- La persistencia basada en Excel está pensada para demostración y uso local; no sustituye una base de datos institucional multiusuario.
-- Los datos incluidos o generados son de demostración.
-- La clave de demostración y los datos simulados no deben reutilizarse en producción.
-- Antes de distribuir el instalador, verifica su procedencia y el contenido de la versión publicada.
-
-## Licencia
-
-Este proyecto se distribuye bajo la [Licencia MIT](LICENSE).
+---
 
 <div align="center">
   <b>Universidad Cooperativa de Colombia — Campus Cali · 2026</b>
