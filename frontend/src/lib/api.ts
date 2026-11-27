@@ -18,7 +18,9 @@ import { downloadBinaryFile } from "@/lib/platform";
 const API_URL_STORAGE_KEY = "ucc_api_base_url";
 const TOKEN_STORAGE_KEY = "ucc_jwt_token";
 
-export const DEFAULT_API_URL = (import.meta.env.VITE_API_URL || "http://localhost:8000/api/v1").replace(/\/+$/, "");
+export const DEFAULT_API_URL = (
+  import.meta.env.VITE_API_URL || "https://sistema-universitario-ucc-api.onrender.com/api/v1"
+).replace(/\/+$/, "");
 export const GITHUB_RELEASES_URL =
   import.meta.env.VITE_GITHUB_RELEASES_URL || "https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases";
 
