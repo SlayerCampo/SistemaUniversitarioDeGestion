@@ -12,8 +12,9 @@ export function DescargasPage() {
   const isMobile = isAndroid || isIOS;
   const [confirmDesktopOnMobile, setConfirmDesktopOnMobile] = useState(false);
 
-  const apkUrl = `${GITHUB_RELEASES_URL}/latest/download/UCC_Academico_v2.apk`;
-  const exeUrl = `${GITHUB_RELEASES_URL}/latest/download/Instalador_UCC_Academico_v2_Setup.exe`;
+  const apkUrl = "/descargas/UCC_Academico_v2.apk";
+  const exeUrl = "/descargas/Instalador_UCC_Academico_v2_Setup.exe";
+  const qrApkUrl = typeof window !== "undefined" ? `${window.location.origin}${apkUrl}` : apkUrl;
 
   return (
     <div className="space-y-6">
@@ -98,7 +99,7 @@ export function DescargasPage() {
                   Entiendo que es solo para PC y deseo descargarlo para transferirlo.
                 </label>
                 {confirmDesktopOnMobile && (
-                  <a href={exeUrl} target="_blank" rel="noreferrer" className="block">
+                  <a href={exeUrl} download="Instalador_UCC_Academico_v2_Setup.exe" className="block">
                     <Button variant="outline" className="w-full">
                       <Download className="w-4 h-4" /> Descargar Instalador Windows (.exe)
                     </Button>
@@ -107,7 +108,7 @@ export function DescargasPage() {
               </div>
             ) : (
               <div className="space-y-2">
-                <a href={exeUrl} target="_blank" rel="noreferrer" className="block">
+                <a href={exeUrl} download="Instalador_UCC_Academico_v2_Setup.exe" className="block">
                   <Button size="lg" className="w-full">
                     <Download className="w-4 h-4" />
                     Descargar Instalador Windows (.exe)
@@ -149,18 +150,18 @@ export function DescargasPage() {
             {!isMobile && (
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-4">
                 <div className="bg-white p-2 rounded-xl border border-slate-200 shrink-0">
-                  <QRCodeSVG value={GITHUB_RELEASES_URL} size={84} fgColor="#154B75" />
+                  <QRCodeSVG value={qrApkUrl} size={84} fgColor="#154B75" />
                 </div>
                 <div className="text-xs text-slate-600 space-y-1">
                   <p className="font-bold text-slate-900">Escanea desde tu celular</p>
-                  <p>Apunta la cámara de tu Android para abrir los Releases y descargar el archivo <b>.apk</b> al instante.</p>
+                  <p>Apunta la cámara de tu Android para descargar el archivo <b>.apk</b> directamente al instante.</p>
                 </div>
               </div>
             )}
           </div>
 
           <div className="space-y-2">
-            <a href={apkUrl} target="_blank" rel="noreferrer" className="block">
+            <a href={apkUrl} download="UCC_Academico_v2.apk" className="block">
               <Button variant="success" size="lg" className="w-full">
                 <Download className="w-4 h-4" />
                 Descargar App Android (.apk)
