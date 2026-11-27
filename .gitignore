@@ -42,10 +42,12 @@ frontend/android/local.properties
 .env.local
 .env.*.local
 
-# Temporales OS / IDEs / Excel
+# Temporales OS / IDEs / Excel / Guías locales de estudio
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 ~$*.xlsx
 *.tmp
+GUIA_VISUAL_ESTUDIO_UCC.html
+GUIA_INTERNA_RENDER_SUPABASE.html

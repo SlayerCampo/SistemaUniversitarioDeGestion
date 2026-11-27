@@ -258,7 +258,7 @@ flowchart TB
         UI_WEB --> API_CLI
     end
 
-    I_REST(("«interface»\nIAuth / IMatricula\nINotas / IReportes"))
+    I_REST(("«interface»<br/>IAuth / IMatricula<br/>INotas / IReportes"))
     API_CLI -. "requiere (HTTPS/JSON)" .-> I_REST
 
     subgraph BACK ["«component» Backend FastAPI (Python 3.11)"]
@@ -276,11 +276,11 @@ flowchart TB
 
     I_REST --- R_AUTH & R_MAT & R_NOT & R_ETL
 
-    I_SQL(("«interface»\nISQLAlchemySession"))
+    I_SQL(("«interface»<br/>ISQLAlchemySession"))
     S_MAT & S_PDF & S_ETL -. "requiere (TCP/5432)" .-> I_SQL
 
     subgraph DB ["«component» Motor de Base de Datos"]
-        PG[("PostgreSQL 16/17\nEsquema 3FN + Alembic")]
+        PG[("PostgreSQL 16/17<br/>Esquema 3FN + Alembic")]
     end
 
     I_SQL --- PG
@@ -309,8 +309,8 @@ flowchart TB
             ART_PG --- VOL_DB
         end
 
-        CLIENT_NODE -- "HTTP/REST + JWT\nPuerto 8000" --> DOCKER_API
-        DOCKER_API -- "TCP / psycopg3\nPuerto 5432" --> DOCKER_DB
+        CLIENT_NODE -- "HTTP/REST + JWT<br/>Puerto 8000" --> DOCKER_API
+        DOCKER_API -- "TCP / psycopg3<br/>Puerto 5432" --> DOCKER_DB
     end
 ```
 
@@ -330,10 +330,10 @@ flowchart TD
     end
 
     subgraph P_BACK ["«package» backend::app"]
-        P_ROUTERS["«package» routers\n(auth, catalogo, matricula, notas, reportes, etl_demo)"]
-        P_SERVICES["«package» services\n(matricula_service, pdf_service, etl_excel_service)"]
-        P_CORE["«package» core\n(config, security, horarios)"]
-        P_DB["«package» db\n(models, session, seed)"]
+        P_ROUTERS["«package» routers<br/>(auth, catalogo, matricula, notas, reportes, etl_demo)"]
+        P_SERVICES["«package» services<br/>(matricula_service, pdf_service, etl_excel_service)"]
+        P_CORE["«package» core<br/>(config, security, horarios)"]
+        P_DB["«package» db<br/>(models, session, seed)"]
         P_SCHEMAS["«package» schemas"]
     end
 
@@ -383,20 +383,40 @@ Extensión del metamodelo UML adaptada al dominio web de FastAPI + SQLAlchemy + 
 
 ```mermaid
 classDiagram
-    class Class_Meta["«metaclass»\nUML::Class"]
-    class Component_Meta["«metaclass»\nUML::Component"]
+    class UML_Class {
+        <<metaclass>>
+    }
+    class UML_Component {
+        <<metaclass>>
+    }
+    class APIRouter {
+        <<stereotype>>
+        +String prefix
+        +List tags
+    }
+    class DomainService {
+        <<stereotype>>
+        +bool transactional
+    }
+    class ORMEntity {
+        <<stereotype>>
+        +String tablename
+        +String normalForm
+    }
+    class PydanticDTO {
+        <<stereotype>>
+        +bool from_attributes
+    }
+    class MultiPlatformUI {
+        <<stereotype>>
+        +String targets
+    }
 
-    class Stereotype_Router["«stereotype»\nAPIRouter\n+prefix: String\n+tags: List"]
-    class Stereotype_Service["«stereotype»\nDomainService\n+transactional: bool"]
-    class Stereotype_Entity["«stereotype»\nORMEntity\n+tablename: String\n+normalForm: 3FN"]
-    class Stereotype_Schema["«stereotype»\nPydanticDTO\n+from_attributes: bool"]
-    class Stereotype_Client["«stereotype»\nMultiPlatformUI\n+targets: Web|Tauri|Capacitor"]
-
-    Stereotype_Router --|> Class_Meta : «extension»
-    Stereotype_Service --|> Class_Meta : «extension»
-    Stereotype_Entity --|> Class_Meta : «extension»
-    Stereotype_Schema --|> Class_Meta : «extension»
-    Stereotype_Client --|> Component_Meta : «extension»
+    APIRouter --|> UML_Class : extension
+    DomainService --|> UML_Class : extension
+    ORMEntity --|> UML_Class : extension
+    PydanticDTO --|> UML_Class : extension
+    MultiPlatformUI --|> UML_Component : extension
 ```
 
 ---
@@ -456,7 +476,7 @@ flowchart TD
     end
 
     subgraph SW_DB ["Carril: PostgreSQL"]
-        A8["UPDATE grupos SET cupos_disponibles = cupos_disponibles - 1\nINSERT INTO matriculas"]
+        A8["UPDATE grupos SET cupos_disponibles = cupos_disponibles - 1<br/>INSERT INTO matriculas"]
     end
 
     A3 --> A4
@@ -569,15 +589,15 @@ Encadenamiento global de marcos de interacción (`sd`) con rutas alternativas y 
 
 ```mermaid
 flowchart TD
-    START(("●")) --> SD1["<b>sd</b> Autenticación JWT\n(Usuario -> API -> PostgreSQL)"]
+    START(("●")) --> SD1["<b>sd</b> Autenticación JWT<br/>(Usuario -> API -> PostgreSQL)"]
     SD1 --> DEC{"¿Rol del Usuario?"}
 
-    DEC -- "Estudiante" --> SD2["<b>sd</b> Matrícula Inteligente\n(Selección + Cupos Atómicos)"]
-    SD2 --> SD3["<b>sd</b> Consulta Boletín y PDF\n(ReportLab + Descarga)"]
+    DEC -- "Estudiante" --> SD2["<b>sd</b> Matrícula Inteligente<br/>(Selección + Cupos Atómicos)"]
+    SD2 --> SD3["<b>sd</b> Consulta Boletín y PDF<br/>(ReportLab + Descarga)"]
 
-    DEC -- "Docente" --> SD4["<b>sd</b> Registro de Notas\n(Cortes 30/30/40 + PPS)"]
+    DEC -- "Docente" --> SD4["<b>sd</b> Registro de Notas<br/>(Cortes 30/30/40 + PPS)"]
 
-    DEC -- "Administrador" --> SD5["<b>sd</b> Gestión Catálogo / ETL / Modo Demo\n(Seed 50+ Estudiantes / Excel)"]
+    DEC -- "Administrador" --> SD5["<b>sd</b> Gestión Catálogo / ETL / Modo Demo<br/>(Seed 50+ Estudiantes / Excel)"]
 
     SD3 & SD4 & SD5 --> END(("◉"))
 ```

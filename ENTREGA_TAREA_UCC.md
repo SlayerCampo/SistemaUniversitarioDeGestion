@@ -3,7 +3,7 @@
 # 🏛️ UNIVERSIDAD COOPERATIVA DE COLOMBIA
 ### **Campus Cali · Facultad de Ingeniería — Ingeniería de Sistemas**
 ### **Asignatura:** Ingeniería de Software
-### **Docente:** `Ing. [Nombre del Profesor]` *(actualizar con el nombre exacto del docente)*
+### **Dirigido a:** Docente Evaluador — Facultad de Ingeniería
 
 ---
 
@@ -28,10 +28,10 @@
 | **Institución** | Universidad Cooperativa de Colombia (UCC) — Sede Cali |
 | **Facultad / Programa** | Facultad de Ingeniería — Ingeniería de Sistemas |
 | **Asignatura** | Ingeniería de Software |
-| **Docente Evaluador** | `Ing. [Nombre del Profesor]` |
+| **Docente Evaluador** | Docente Titular — Ingeniería de Software (UCC Cali) |
 | **Equipo de Desarrollo** | 1. **Alejandro Campo Solarte** (ID Timonel: `938203`)<br>2. **Juan Esteban Cardona Calambas** (ID Timonel: `939422`)<br>3. **Diego Fernando Gómez Rivera** (ID Timonel: `937804`) |
 | **Repositorio GitHub** | [github.com/SlayerCampo/SistemaUniversitarioDeGestion](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion) |
-| **Documentación UML y MER** | Ver [DIAGRAMAS_UML_Y_MER.md](./DIAGRAMAS_UML_Y_MER.md) (15 modelos completos) |
+| **📐 Diagramas UML 2.5 y MER (15 Modelos)** | 👉 **[Ver los 15 Diagramas UML y MER completos aquí](./DIAGRAMAS_UML_Y_MER.md)** |
 | **Periodo Académico Base** | `2026-2` |
 
 ---
@@ -60,15 +60,15 @@ Todas consumen la misma **API REST en FastAPI (Python 3.11)** respaldada por **P
 ```mermaid
 flowchart LR
     subgraph CLIENTES ["Capa de Presentación Unificada (React + TypeScript + Tailwind)"]
-        WEB["🌐 Web App\nCloudflare Pages"]
-        WIN["💻 Escritorio Windows\nTauri (.exe)"]
-        AND["📱 App Android\nCapacitor (.apk)"]
+        WEB["Web App<br/>Cloudflare Pages"]
+        WIN["Escritorio Windows<br/>Tauri (.exe)"]
+        AND["App Android<br/>Capacitor (.apk)"]
     end
 
-    WEB & WIN & AND -->|HTTPS + JWT Bearer| API["⚡ Backend FastAPI\nPython 3.11 + Uvicorn"]
-    API -->|SQLAlchemy 2.0 + Alembic| DB[("🐘 PostgreSQL 16/17\n10 Tablas 3FN + CHECKs")]
-    API -->|OpenPyXL| ETL["📊 Motor ETL Excel\nImportar / Exportar / Simular"]
-    API -->|ReportLab| PDF["📄 Generador PDF\nRecibos y Boletines"]
+    WEB & WIN & AND -->|HTTPS + JWT Bearer| API["Backend FastAPI<br/>Python 3.11 + Uvicorn"]
+    API -->|SQLAlchemy 2.0 + Alembic| DB[("PostgreSQL 16/17<br/>10 Tablas 3FN + CHECKs")]
+    API -->|OpenPyXL| ETL["Motor ETL Excel<br/>Importar / Exportar / Simular"]
+    API -->|ReportLab| PDF["Generador PDF<br/>Recibos y Boletines"]
 ```
 
 ---

@@ -15,11 +15,11 @@
 
 ---
 
-### 🚀 **Descargas Oficiales y Accesos Directos**
+### 🚀 **Descargas Oficiales y Documentación Académica**
 
-| 💻 **App de Escritorio Windows (`.exe`)** | 📱 **App Móvil Android (`.apk`)** | 📦 **Respaldo Histórico v1.0** |
-| :---: | :---: | :---: |
-| [![Descargar Windows](https://img.shields.io/badge/DESCARGAR_WINDOWS_.EXE-1F6AA5?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Descargar Android](https://img.shields.io/badge/DESCARGAR_ANDROID_.APK-15803D?style=for-the-badge&logo=android&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Tag v1.0-legacy](https://img.shields.io/badge/VER_VERSIÓN_v1.0-475569?style=for-the-badge&logo=git&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/tree/v1.0-legacy) |
+| 💻 **App de Escritorio Windows (`.exe`)** | 📱 **App Móvil Android (`.apk`)** | 📘 **Documento Entregable** | 📐 **15 Diagramas UML y MER** |
+| :---: | :---: | :---: | :---: |
+| [![Descargar Windows](https://img.shields.io/badge/DESCARGAR_WINDOWS_.EXE-1F6AA5?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Descargar Android](https://img.shields.io/badge/DESCARGAR_ANDROID_.APK-15803D?style=for-the-badge&logo=android&logoColor=white)](https://github.com/SlayerCampo/SistemaUniversitarioDeGestion/releases) | [![Ver Entregable](https://img.shields.io/badge/VER_ENTREGABLE_.MD-0F172A?style=for-the-badge&logo=markdown&logoColor=white)](./ENTREGA_TAREA_UCC.md) | [![Ver Diagramas](https://img.shields.io/badge/VER_15_DIAGRAMAS_UML-7C3AED?style=for-the-badge&logo=mermaid&logoColor=white)](./DIAGRAMAS_UML_Y_MER.md) |
 
 </div>
 
